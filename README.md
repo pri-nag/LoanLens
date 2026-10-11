@@ -1,7 +1,3 @@
-
-
-https://github.com/user-attachments/assets/281cf772-8a90-43c0-a592-3b44cfbdbec1
-
 # Personal loan eligibility in India
 
 *"Can I get a personal loan, and from whom?"*
