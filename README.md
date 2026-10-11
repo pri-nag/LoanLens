@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/281cf772-8a90-43c0-a592-3b44cfbdbec1
+
 # Personal loan eligibility in India
 
 *"Can I get a personal loan, and from whom?"*
@@ -12,7 +16,10 @@ and uses them in a **rule-based model** (no ML). For one applicant it returns:
 ## Demo Video
 
 
-https://github.com/user-attachments/assets/9c2a03e1-9655-4b24-a32e-d616fa7c5168
+
+https://github.com/user-attachments/assets/c0f1477b-c728-4b64-8229-e45f9a74ba2f
+
+
 
 
 
