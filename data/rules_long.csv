@@ -1,0 +1,625 @@
+lender_id,rule,value,source_id,evidence_tier,is_estimate,estimation_method,notes
+hdfc,min_age,21,HDFC-P5,lender_official,false,,Re-read 2026-10-12
+hdfc,max_age_at_maturity,60,HDFC-P5,lender_official,false,,"Page says ""aged 21 to 60""; whether 60 is at application or at loan end is not stated, treated as age at end of loan"
+hdfc,max_age_at_maturity_se,65,HDFC-A1,aggregator,false,,
+hdfc,min_income_metro,25000,HDFC-P5,lender_official,false,,BankBazaar shows Rs 20k metro / 15k other; official page Rs 25k used
+hdfc,min_income_non_metro,25000,HDFC-P5,lender_official,false,,Official page gives one figure for all cities
+hdfc,min_total_exp_months,24,HDFC-P5,lender_official,false,,Was BankBazaar (HDFC-A1); same value confirmed on HDFC page
+hdfc,min_current_job_months,12,HDFC-P5,lender_official,false,,Was BankBazaar (HDFC-A1); same value confirmed on HDFC page
+hdfc,min_credit_score,720,HDFC-P4,estimate,true,"HDFC says >750 'favoured' (not a cut-off); hard floor set 30 pts below, scores 720-749 priced higher",
+hdfc,self_employed_allowed,false,HDFC-P6,lender_official,false,,"FAQ: self-employed are offered a Business Loan, not a Personal Loan"
+hdfc,se_min_annual_income,500000,HDFC-A1,aggregator,false,,
+hdfc,foir_lt_50k,0.45,HDFC-P3,estimate,true,HDFC's own FOIR article gives 40-55% as typical; spread from 45% (low income) to 55% (high income),
+hdfc,foir_50k_1l,0.5,HDFC-P3,estimate,true,HDFC's own FOIR article gives 40-55% as typical; spread from 45% (low income) to 55% (high income),
+hdfc,foir_ge_1l,0.55,HDFC-P3,estimate,true,HDFC's own FOIR article gives 40-55% as typical; spread from 45% (low income) to 55% (high income),
+hdfc,min_loan_amount,25000,HDFC-P6,lender_official,false,,"Was Rs 50,000 (BankBazaar)"
+hdfc,max_loan_amount,5000000,HDFC-P6,lender_official,false,,FAQ: up to Rs 75 lakh subject to eligibility; Rs 50 lakh used
+hdfc,min_tenure_months,12,HDFC-A2,aggregator,false,,
+hdfc,max_tenure_months,72,HDFC-P6,lender_official,false,,FAQ: up to 72 months (festive offer valid till 30-Nov-2026); EMI calculator slider goes to 7 years
+hdfc,rate_min_pct,9.99,HDFC-P2,lender_official,false,,
+hdfc,rate_max_pct,24.0,HDFC-P2,lender_official,false,,
+hdfc,processing_fee_pct,0.025,HDFC-A3,aggregator,false,,
+hdfc,processing_fee_cap,6500,HDFC-P2,lender_official,false,,Re-read 2026-10-12
+hdfc,ntc_allowed,false,BUREAU-SCORE,estimate,true,Lender-type default (pvt bank). Linked guide: most lenders want 700+ and no-score applicants may be rejected; this lender's own stance is not published,
+hdfc,se_min_age,25,INDUSIND-P1,estimate,true,"Not published by HDFC Bank. pvt bank default, the value IndusInd Bank publishes for this rule (linked)",
+hdfc,se_min_vintage_months,36,HDB-P2,estimate,true,"Not published by HDFC Bank. pvt bank default, the value HDB Financial Services publishes for this rule (linked)",
+hdfc,allowed_employer_categories,govt|psu|mnc|listed|pvt_ltd|llp,HDFC-P6,lender_official,false,,"Product page: 'Private, Limited and LLP Companies' and PSUs; eligibility page lists only private limited companies and PSUs; proprietorships not listed"
+hdfc,salary_account_required,false,PNB-N1,estimate,true,"Not published by HDFC Bank. pvt bank default, the value Punjab National Bank publishes for this rule (linked)",
+hdfc,max_income_multiple,24,PNB-P1,estimate,true,"Not published by HDFC Bank. 24x is the multiple PNB publishes (linked); SBI publishes 30x and the calculators read show 10-20x, so 24x sits mid-range; rarely binds before FOIR",
+hdfc,max_dpd_12m,0,BUREAU-DPD,estimate,true,Not published. Industry practice: banks decline any 30+ DPD in last 12m; NBFC/fintech tolerate up to 30 days. Linked guide confirms high DPD leads to decline but gives no threshold; the day limit is the estimate,
+hdfc,max_enquiries_6m,4,BUREAU-ENQ,estimate,true,Not published. Credit-hungry flag; banks stricter than NBFC/fintech. Linked guide confirms frequent enquiries can lead to decline but gives no count; the count is the estimate,
+hdfc,writeoff_allowed,false,BUREAU-WO,estimate,true,Not published. Written-off/settled accounts are a standard knock-out at all lenders. Linked guide: lenders may refuse a loan with a written-off or settled account,
+hdfc,rate_avg_pct,10.89,HDFC-P2,lender_official,false,,Average IRR on loans sanctioned Apr-Jun 2026 (Q1 FY2026-27)
+hdfc,rate_best_min_amount,1500000,HDFC-P7,lender_official,false,,'Get 9.99% p.a. on Rs 15 lakh+'; product page: 'above certain loan amount and good credit score'
+icici,min_age,18,ICICI-P4,lender_official,false,,Eligibility page: 18-58 for salaried; product page says 20-58
+icici,max_age_at_maturity,58,ICICI-P4,lender_official,false,,
+icici,max_age_at_maturity_se,65,ICICI-P4,lender_official,false,,
+icici,min_income_metro,30000,ICICI-P4,lender_official,false,,"'will differ depending on the profile (type of employer, relationship with ICICI Bank)'"
+icici,min_income_non_metro,30000,ICICI-P4,lender_official,false,,One figure for all cities
+icici,min_total_exp_months,24,ICICI-P4,lender_official,false,,
+icici,min_credit_score,700,ICICI-P4,lender_official,false,,'A credit score of 700 and above is preferred'; FAQ lists score below 700 as a rejection reason
+icici,self_employed_allowed,true,ICICI-P4,lender_official,false,,Page lists self-employed criteria but says they are served through business instalment loans
+icici,se_min_vintage_months,24,ICICI-P4,lender_official,false,,2 years in current business and total experience >= 3 years
+icici,se_min_annual_income,200000,ICICI-P1,lender_official,false,,PAT Rs 2 lakh (professionals)
+icici,se_min_age,23,ICICI-P4,lender_official,false,,
+icici,max_loan_amount,5000000,ICICI-P4,lender_official,false,,
+icici,min_tenure_months,12,ICICI-P8,lender_official,false,,
+icici,max_tenure_months,84,ICICI-P8,lender_official,false,,
+icici,rate_min_pct,9.99,ICICI-P5,lender_official,false,,
+icici,rate_max_pct,16.5,ICICI-P5,lender_official,false,,
+icici,min_current_job_months,6,ABCL-P2,estimate,true,"Not published by ICICI Bank. pvt bank default, the value Aditya Birla Capital publishes for this rule (linked)",
+icici,ntc_allowed,false,BUREAU-SCORE,estimate,true,Lender-type default (pvt bank). Linked guide: most lenders want 700+ and no-score applicants may be rejected; this lender's own stance is not published,
+icici,allowed_employer_categories,any,ICICI-P4,estimate,true,"ICICI Bank's eligibility page (linked) lists no employer restriction, read as any. Lender-type default (pvt bank)",
+icici,salary_account_required,false,PNB-N1,estimate,true,"Not published by ICICI Bank. pvt bank default, the value Punjab National Bank publishes for this rule (linked)",
+icici,foir_lt_50k,0.45,ICICI-P6,estimate,true,"ICICI FAQ: prefers FOIR below 40-45%, above 50% sharply cuts approval; its own calculator applies 70% to every employer (ICICI-P7), so 70% is only an upper bound",
+icici,foir_50k_1l,0.5,ICICI-P6,estimate,true,"ICICI FAQ: prefers FOIR below 40-45%, above 50% sharply cuts approval; its own calculator applies 70% to every employer (ICICI-P7), so 70% is only an upper bound",
+icici,foir_ge_1l,0.5,ICICI-P6,estimate,true,"ICICI FAQ: prefers FOIR below 40-45%, above 50% sharply cuts approval; its own calculator applies 70% to every employer (ICICI-P7), so 70% is only an upper bound",
+icici,max_income_multiple,24,PNB-P1,estimate,true,"Not published by ICICI Bank. 24x is the multiple PNB publishes (linked); SBI publishes 30x and the calculators read show 10-20x, so 24x sits mid-range; rarely binds before FOIR",
+icici,min_loan_amount,50000,ICICI-P4,lender_official,false,,
+icici,processing_fee_pct,0.02,ICICI-P5,lender_official,false,,Up to 2% + taxes
+icici,max_dpd_12m,0,BUREAU-DPD,estimate,true,Not published. Industry practice: banks decline any 30+ DPD in last 12m; NBFC/fintech tolerate up to 30 days. Linked guide confirms high DPD leads to decline but gives no threshold; the day limit is the estimate,
+icici,max_enquiries_6m,4,BUREAU-ENQ,estimate,true,Not published. Credit-hungry flag; banks stricter than NBFC/fintech. Linked guide confirms frequent enquiries can lead to decline but gives no count; the count is the estimate,
+icici,writeoff_allowed,false,BUREAU-WO,estimate,true,Not published. Written-off/settled accounts are a standard knock-out at all lenders. Linked guide: lenders may refuse a loan with a written-off or settled account,
+icici,rate_avg_pct,11.45,ICICI-P5,lender_official,false,,Mean rate disclosed on the rates page
+axis,min_age,21,AXIS-P1,lender_official,false,,
+axis,max_age_at_maturity,60,AXIS-P1,lender_official,false,,
+axis,min_income_metro,25000,AXIS-P1,lender_official,false,,Non-Axis customers
+axis,min_income_non_metro,25000,AXIS-P1,lender_official,false,,Non-Axis customers
+axis,self_employed_allowed,false,AXIS-P1,lender_official,false,,Page lists salaried applicants only
+axis,min_credit_score,700,AXIS-A1,aggregator,false,,
+axis,min_loan_amount,50000,AXIS-P1,lender_official,false,,
+axis,max_loan_amount,5000000,AXIS-P1,lender_official,false,,"Rs 50,000-50 lakh; the earlier Rs 25 lakh no-relationship cap is no longer stated"
+axis,rate_min_pct,9.99,AXIS-P3,lender_official,false,,
+axis,max_age_at_maturity_se,65,HDFC-A1,estimate,true,"Not published by Axis Bank. pvt bank default, the value HDFC Bank publishes for this rule (linked)",
+axis,min_total_exp_months,12,KOTAK-P3,estimate,true,"Not published by Axis Bank. pvt bank default, the value Kotak Mahindra Bank publishes for this rule (linked)",
+axis,min_current_job_months,6,ABCL-P2,estimate,true,"Not published by Axis Bank. pvt bank default, the value Aditya Birla Capital publishes for this rule (linked)",
+axis,ntc_allowed,false,BUREAU-SCORE,estimate,true,Lender-type default (pvt bank). Linked guide: most lenders want 700+ and no-score applicants may be rejected; this lender's own stance is not published,
+axis,se_min_age,25,INDUSIND-P1,estimate,true,"Not published by Axis Bank. pvt bank default, the value IndusInd Bank publishes for this rule (linked)",
+axis,se_min_vintage_months,36,HDB-P2,estimate,true,"Not published by Axis Bank. pvt bank default, the value HDB Financial Services publishes for this rule (linked)",
+axis,se_min_annual_income,500000,HDFC-A1,estimate,true,"Not published by Axis Bank. pvt bank default, the value HDFC Bank publishes for this rule (linked)",
+axis,allowed_employer_categories,govt|psu|mnc|listed|pvt_ltd,AXIS-P1,lender_official,false,,Public and private limited companies; govt sector incl. PSU
+axis,salary_account_required,false,PNB-N1,estimate,true,"Not published by Axis Bank. pvt bank default, the value Punjab National Bank publishes for this rule (linked)",
+axis,foir_lt_50k,0.4,AXIS-P4,estimate,true,"Axis: existing EMIs should not exceed 40% of take-home pay; 40% kept for low incomes, +5 pp per higher income band",
+axis,foir_50k_1l,0.45,AXIS-P4,estimate,true,"Axis: existing EMIs should not exceed 40% of take-home pay; 40% kept for low incomes, +5 pp per higher income band",
+axis,foir_ge_1l,0.5,AXIS-P4,estimate,true,"Axis: existing EMIs should not exceed 40% of take-home pay; 40% kept for low incomes, +5 pp per higher income band",
+axis,max_income_multiple,15,AXIS-C1,lender_official,false,,"Calculator: 15 x net income at every income tested; its own cap is Rs 15 lakh (product page: up to Rs 50 lakh); it ignores existing EMIs, the model still applies FOIR"
+axis,min_tenure_months,12,HDFC-A2,estimate,true,"Not published by Axis Bank. pvt bank default, the value HDFC Bank publishes for this rule (linked)",
+axis,max_tenure_months,84,AXIS-P1,lender_official,false,,
+axis,rate_max_pct,22.0,AXIS-P3,lender_official,false,,
+axis,processing_fee_pct,0.02,AXIS-P3,lender_official,false,,Up to 2% + GST
+axis,max_dpd_12m,0,BUREAU-DPD,estimate,true,Not published. Industry practice: banks decline any 30+ DPD in last 12m; NBFC/fintech tolerate up to 30 days. Linked guide confirms high DPD leads to decline but gives no threshold; the day limit is the estimate,
+axis,max_enquiries_6m,4,BUREAU-ENQ,estimate,true,Not published. Credit-hungry flag; banks stricter than NBFC/fintech. Linked guide confirms frequent enquiries can lead to decline but gives no count; the count is the estimate,
+axis,writeoff_allowed,false,BUREAU-WO,estimate,true,Not published. Written-off/settled accounts are a standard knock-out at all lenders. Linked guide: lenders may refuse a loan with a written-off or settled account,
+axis,serviceable_cities,Bangalore|Chennai|Delhi|Mumbai|Hyderabad|Gurgaon|Noida|Ghaziabad|Faridabad|Pune|Ahmedabad|Kolkata|Coimbatore|Kochi|Jaipur|Lucknow|Patna|Jamshedpur|Vadodara|Trivandrum|Vishakhapatnam|Bhubaneshwar|Trichy|Surat|Nashik|Aurangabad|Goa|Guwahati|Nagpur|Chandigarh|Bhopal|Calicut|Jodhpur|Mysore|Pondicherry|Raipur|Rajkot|Durgapur|Dehradun|Hubli|Jalandhar|Kolhapur|Ludhiana|Madurai|Mangalore|Patiala|Siliguri|Ranchi|Tirunelveli|Udaipur|Vijaywada|Indore|Ajmer|Allahabad|Bhatinda|Belgaum|Bhavnagar|Bhilwara|Jamnagar|Kanpur|Kota|Salem|Ujjain|Warangal|Mehsana,AXIS-P1,lender_official,false,,'available only at the below mentioned locations'; 65 cities in Tiers 1-4
+axis,min_income_metro@rel,15000,AXIS-P1,lender_official,false,,Axis Bank customers
+axis,min_income_non_metro@rel,15000,AXIS-P1,lender_official,false,,Axis Bank customers
+kotak,min_age,21,KOTAK-P1,lender_official,false,,
+kotak,max_age_at_maturity,60,KOTAK-P1,lender_official,false,,
+kotak,min_income_metro,30000,KOTAK-P3,lender_official,false,,Non-Kotak salary account holders
+kotak,min_income_non_metro,30000,KOTAK-P3,lender_official,false,,Non-Kotak salary account holders
+kotak,min_total_exp_months,12,KOTAK-P3,lender_official,false,,
+kotak,self_employed_allowed,false,KOTAK-P1,lender_official,false,,Must be salaried
+kotak,min_tenure_months,12,KOTAK-P2,lender_official,false,,
+kotak,max_tenure_months,72,KOTAK-P3,lender_official,false,,
+kotak,rate_min_pct,10.99,KOTAK-P4,lender_official,false,,
+kotak,processing_fee_pct,0.05,KOTAK-P4,lender_official,false,,Up to 5% + taxes
+kotak,max_age_at_maturity_se,65,HDFC-A1,estimate,true,"Not published by Kotak Mahindra Bank. pvt bank default, the value HDFC Bank publishes for this rule (linked)",
+kotak,min_current_job_months,6,ABCL-P2,estimate,true,"Not published by Kotak Mahindra Bank. pvt bank default, the value Aditya Birla Capital publishes for this rule (linked)",
+kotak,min_credit_score,685,KOTAK-P3,lender_official,false,,'Cibil Score: 685 or higher' (listed next to an 'Age 21-80*' line that conflicts with the 21-60 stated elsewhere on the page)
+kotak,ntc_allowed,false,BUREAU-SCORE,estimate,true,Lender-type default (pvt bank). Linked guide: most lenders want 700+ and no-score applicants may be rejected; this lender's own stance is not published,
+kotak,se_min_age,25,INDUSIND-P1,estimate,true,"Not published by Kotak Mahindra Bank. pvt bank default, the value IndusInd Bank publishes for this rule (linked)",
+kotak,se_min_vintage_months,36,HDB-P2,estimate,true,"Not published by Kotak Mahindra Bank. pvt bank default, the value HDB Financial Services publishes for this rule (linked)",
+kotak,se_min_annual_income,500000,HDFC-A1,estimate,true,"Not published by Kotak Mahindra Bank. pvt bank default, the value HDFC Bank publishes for this rule (linked)",
+kotak,allowed_employer_categories,psu|mnc|listed|pvt_ltd,KOTAK-P3,lender_official,false,,"'Employed with an MNC, public limited company, or private limited company'; PSUs counted as public limited companies; govt departments not listed"
+kotak,salary_account_required,false,PNB-N1,estimate,true,"Not published by Kotak Mahindra Bank. pvt bank default, the value Punjab National Bank publishes for this rule (linked)",
+kotak,foir_lt_50k,0.5,KOTAK-C1,estimate,true,No Kotak FOIR published and its calculator applies none (it sizes by 20x income net of EMIs); private-bank default kept so very high EMI loads still bind,
+kotak,foir_50k_1l,0.55,KOTAK-C1,estimate,true,No Kotak FOIR published and its calculator applies none (it sizes by 20x income net of EMIs); private-bank default kept so very high EMI loads still bind,
+kotak,foir_ge_1l,0.6,KOTAK-C1,estimate,true,No Kotak FOIR published and its calculator applies none (it sizes by 20x income net of EMIs); private-bank default kept so very high EMI loads still bind,
+kotak,max_income_multiple,20,KOTAK-C1,lender_official,false,,"Calculator: 20 x (income - EMIs); explains the FAQ example (Rs 56,000 -> about Rs 10 lakh)"
+kotak,min_loan_amount,50000,AXIS-P1,estimate,true,"Not published by Kotak Mahindra Bank. pvt bank default, the value Axis Bank publishes for this rule (linked)",
+kotak,max_loan_amount,10000000,KOTAK-P3,lender_official,false,,'up to Rs 1 Crore'
+kotak,rate_max_pct,24.0,HDFC-P2,estimate,true,"Not published by Kotak Mahindra Bank. pvt bank default, the value HDFC Bank publishes for this rule (linked)",
+kotak,max_dpd_12m,0,BUREAU-DPD,estimate,true,Not published. Industry practice: banks decline any 30+ DPD in last 12m; NBFC/fintech tolerate up to 30 days. Linked guide confirms high DPD leads to decline but gives no threshold; the day limit is the estimate,
+kotak,max_enquiries_6m,4,BUREAU-ENQ,estimate,true,Not published. Credit-hungry flag; banks stricter than NBFC/fintech. Linked guide confirms frequent enquiries can lead to decline but gives no count; the count is the estimate,
+kotak,writeoff_allowed,false,BUREAU-WO,estimate,true,Not published. Written-off/settled accounts are a standard knock-out at all lenders. Linked guide: lenders may refuse a loan with a written-off or settled account,
+kotak,min_income_metro@rel,25000,KOTAK-P3,lender_official,false,,Kotak salary account holders
+kotak,min_income_non_metro@rel,25000,KOTAK-P3,lender_official,false,,Kotak salary account holders
+kotak,income_multiple_net_of_emi,true,KOTAK-C1,lender_official,false,,
+indusind,min_age,21,INDUSIND-P1,lender_official,false,,
+indusind,max_age_at_maturity,60,INDUSIND-P1,lender_official,false,,
+indusind,min_income_metro,25000,INDUSIND-P1,lender_official,false,,
+indusind,min_income_non_metro,25000,INDUSIND-P1,lender_official,false,,
+indusind,min_total_exp_months,24,INDUSIND-P1,lender_official,false,,
+indusind,min_current_job_months,12,INDUSIND-P1,lender_official,false,,
+indusind,min_credit_score,730,INDUSIND-A1,aggregator,false,,
+indusind,self_employed_allowed,true,INDUSIND-P1,lender_official,false,,
+indusind,se_min_age,25,INDUSIND-P1,lender_official,false,,
+indusind,max_age_at_maturity_se,65,INDUSIND-P1,lender_official,false,,
+indusind,se_min_annual_income,480000,INDUSIND-P1,lender_official,false,,Annual net income post tax
+indusind,se_min_vintage_months,48,INDUSIND-P1,lender_official,false,,4 years post-qualification (professionals); 5 years for other self-employed
+indusind,min_loan_amount,30000,INDUSIND-A2,aggregator,false,,
+indusind,max_loan_amount,500000,INDUSIND-A2,aggregator,false,,Online/instant product cap
+indusind,min_tenure_months,12,INDUSIND-A2,aggregator,false,,
+indusind,max_tenure_months,48,INDUSIND-P1,lender_official,false,,
+indusind,rate_min_pct,12.0,INDUSIND-P2,lender_official,false,,"Rates offered Apr-Jun 2026, Personal Loan (Insta Funding)"
+indusind,processing_fee_pct,0.02,INDUSIND-P1,lender_official,false,,2% processing fee (limited period offer)
+indusind,ntc_allowed,false,BUREAU-SCORE,estimate,true,Lender-type default (pvt bank). Linked guide: most lenders want 700+ and no-score applicants may be rejected; this lender's own stance is not published,
+indusind,allowed_employer_categories,any,INDUSIND-P1,estimate,true,"IndusInd Bank's eligibility page (linked) lists no employer restriction, read as any. Lender-type default (pvt bank)",
+indusind,salary_account_required,false,PNB-N1,estimate,true,"Not published by IndusInd Bank. pvt bank default, the value Punjab National Bank publishes for this rule (linked)",
+indusind,foir_lt_50k,0.5,HDFC-P3,estimate,true,Not published by IndusInd Bank. Banks: HDFC FOIR blog (40-55%) and benchmark calculator CALC-B1 (50%); NBFCs +5pp (higher risk appetite); fintech flat 50% (low-income book),
+indusind,foir_50k_1l,0.55,HDFC-P3,estimate,true,"Not published by IndusInd Bank. Banded FOIR: lenders allow a larger share of income as income rises (more residual income after expenses); base level from HDFC's FOIR article (40-55%, linked)",
+indusind,foir_ge_1l,0.6,HDFC-P3,estimate,true,"Not published by IndusInd Bank. Banded FOIR for high earners; base level from HDFC's FOIR article (40-55%, linked)",
+indusind,max_income_multiple,24,PNB-P1,estimate,true,"Not published by IndusInd Bank. 24x is the multiple PNB publishes (linked); SBI publishes 30x and the calculators read show 10-20x, so 24x sits mid-range; rarely binds before FOIR",
+indusind,rate_max_pct,15.0,INDUSIND-P2,lender_official,false,,
+indusind,max_dpd_12m,0,BUREAU-DPD,estimate,true,Not published. Industry practice: banks decline any 30+ DPD in last 12m; NBFC/fintech tolerate up to 30 days. Linked guide confirms high DPD leads to decline but gives no threshold; the day limit is the estimate,
+indusind,max_enquiries_6m,4,BUREAU-ENQ,estimate,true,Not published. Credit-hungry flag; banks stricter than NBFC/fintech. Linked guide confirms frequent enquiries can lead to decline but gives no count; the count is the estimate,
+indusind,writeoff_allowed,false,BUREAU-WO,estimate,true,Not published. Written-off/settled accounts are a standard knock-out at all lenders. Linked guide: lenders may refuse a loan with a written-off or settled account,
+indusind,rate_avg_pct,12.8,INDUSIND-P2,lender_official,false,,
+idfc,min_age,21,IDFC-P4,lender_official,false,,
+idfc,max_age_at_maturity,60,IDFC-P4,lender_official,false,,
+idfc,max_age_at_maturity_se,60,IDFC-P1,lender_official,false,,
+idfc,min_income_metro,20000,IDFC-P3,lender_official,false,,Older blog Rs 20k Mumbai/Delhi; FIRSTmoney Rs 10k
+idfc,min_income_non_metro,15000,IDFC-P3,lender_official,false,,
+idfc,min_credit_score,710,IDFC-P4,lender_official,false,,
+idfc,self_employed_allowed,true,IDFC-P4,lender_official,false,,
+idfc,max_loan_amount,1500000,IDFC-P4,lender_official,false,,
+idfc,min_tenure_months,9,IDFC-P4,lender_official,false,,
+idfc,max_tenure_months,60,IDFC-P4,lender_official,false,,
+idfc,rate_min_pct,9.99,IDFC-P4,lender_official,false,,
+idfc,min_total_exp_months,12,KOTAK-P3,estimate,true,"Not published by IDFC FIRST Bank. pvt bank default, the value Kotak Mahindra Bank publishes for this rule (linked)",
+idfc,min_current_job_months,6,ABCL-P2,estimate,true,"Not published by IDFC FIRST Bank. pvt bank default, the value Aditya Birla Capital publishes for this rule (linked)",
+idfc,ntc_allowed,false,BUREAU-SCORE,estimate,true,Lender-type default (pvt bank). Linked guide: most lenders want 700+ and no-score applicants may be rejected; this lender's own stance is not published,
+idfc,se_min_age,25,INDUSIND-P1,estimate,true,"Not published by IDFC FIRST Bank. pvt bank default, the value IndusInd Bank publishes for this rule (linked)",
+idfc,se_min_vintage_months,36,HDB-P2,estimate,true,"Not published by IDFC FIRST Bank. pvt bank default, the value HDB Financial Services publishes for this rule (linked)",
+idfc,se_min_annual_income,500000,HDFC-A1,estimate,true,"Not published by IDFC FIRST Bank. pvt bank default, the value HDFC Bank publishes for this rule (linked)",
+idfc,allowed_employer_categories,any,IDFC-P4,estimate,true,"IDFC FIRST Bank's eligibility page (linked) lists no employer restriction, read as any. Lender-type default (pvt bank)",
+idfc,salary_account_required,false,PNB-N1,estimate,true,"Not published by IDFC FIRST Bank. pvt bank default, the value Punjab National Bank publishes for this rule (linked)",
+idfc,foir_lt_50k,0.5,HDFC-P3,estimate,true,Not published by IDFC FIRST Bank. Banks: HDFC FOIR blog (40-55%) and benchmark calculator CALC-B1 (50%); NBFCs +5pp (higher risk appetite); fintech flat 50% (low-income book),
+idfc,foir_50k_1l,0.55,HDFC-P3,estimate,true,"Not published by IDFC FIRST Bank. Banded FOIR: lenders allow a larger share of income as income rises (more residual income after expenses); base level from HDFC's FOIR article (40-55%, linked)",
+idfc,foir_ge_1l,0.6,HDFC-P3,estimate,true,"Not published by IDFC FIRST Bank. Banded FOIR for high earners; base level from HDFC's FOIR article (40-55%, linked)",
+idfc,max_income_multiple,10,IDFC-C1,lender_official,false,,"Calculator: 10 x (income - EMIs), capped at Rs 15 lakh"
+idfc,min_loan_amount,50000,AXIS-P1,estimate,true,"Not published by IDFC FIRST Bank. pvt bank default, the value Axis Bank publishes for this rule (linked)",
+idfc,rate_max_pct,24.0,HDFC-P2,estimate,true,"Not published by IDFC FIRST Bank. pvt bank default, the value HDFC Bank publishes for this rule (linked)",
+idfc,processing_fee_pct,0.0297,IDFC-P4,lender_official,false,,0%-3.5% including GST = up to 2.97% + GST
+idfc,max_dpd_12m,0,BUREAU-DPD,estimate,true,Not published. Industry practice: banks decline any 30+ DPD in last 12m; NBFC/fintech tolerate up to 30 days. Linked guide confirms high DPD leads to decline but gives no threshold; the day limit is the estimate,
+idfc,max_enquiries_6m,4,BUREAU-ENQ,estimate,true,Not published. Credit-hungry flag; banks stricter than NBFC/fintech. Linked guide confirms frequent enquiries can lead to decline but gives no count; the count is the estimate,
+idfc,writeoff_allowed,false,BUREAU-WO,estimate,true,Not published. Written-off/settled accounts are a standard knock-out at all lenders. Linked guide: lenders may refuse a loan with a written-off or settled account,
+idfc,income_multiple_net_of_emi,true,IDFC-C1,lender_official,false,,
+yes,min_age,22,YES-A2,aggregator,false,,2020 page
+yes,max_age_at_maturity,58,YES-A2,aggregator,false,,2020 page
+yes,min_income_metro,25000,YES-A2,aggregator,false,,2020 page
+yes,min_income_non_metro,25000,YES-A2,aggregator,false,,
+yes,min_credit_score,700,YES-A1,aggregator,false,,
+yes,max_loan_amount,5000000,YES-P1,lender_official,false,,
+yes,min_loan_amount,50000,YES-P1,lender_official,false,,
+yes,min_tenure_months,12,YES-A1,aggregator,false,,
+yes,max_tenure_months,60,YES-A1,aggregator,false,,
+yes,rate_min_pct,10.85,YES-P1,lender_official,false,,
+yes,rate_max_pct,20.25,YES-A2,aggregator,false,,
+yes,max_age_at_maturity_se,65,HDFC-A1,estimate,true,"Not published by YES BANK. pvt bank default, the value HDFC Bank publishes for this rule (linked)",
+yes,min_total_exp_months,12,KOTAK-P3,estimate,true,"Not published by YES BANK. pvt bank default, the value Kotak Mahindra Bank publishes for this rule (linked)",
+yes,min_current_job_months,6,ABCL-P2,estimate,true,"Not published by YES BANK. pvt bank default, the value Aditya Birla Capital publishes for this rule (linked)",
+yes,ntc_allowed,false,BUREAU-SCORE,estimate,true,Lender-type default (pvt bank). Linked guide: most lenders want 700+ and no-score applicants may be rejected; this lender's own stance is not published,
+yes,self_employed_allowed,true,ICICI-P4,estimate,true,"Not published by YES BANK. pvt bank default, the value ICICI Bank publishes for this rule (linked)",
+yes,se_min_age,25,INDUSIND-P1,estimate,true,"Not published by YES BANK. pvt bank default, the value IndusInd Bank publishes for this rule (linked)",
+yes,se_min_vintage_months,36,HDB-P2,estimate,true,"Not published by YES BANK. pvt bank default, the value HDB Financial Services publishes for this rule (linked)",
+yes,se_min_annual_income,500000,HDFC-A1,estimate,true,"Not published by YES BANK. pvt bank default, the value HDFC Bank publishes for this rule (linked)",
+yes,allowed_employer_categories,any,YES-P1,estimate,true,"YES BANK's eligibility page (linked) lists no employer restriction, read as any. Lender-type default (pvt bank)",
+yes,salary_account_required,false,PNB-N1,estimate,true,"Not published by YES BANK. pvt bank default, the value Punjab National Bank publishes for this rule (linked)",
+yes,foir_lt_50k,0.5,HDFC-P3,estimate,true,Not published by YES BANK. Banks: HDFC FOIR blog (40-55%) and benchmark calculator CALC-B1 (50%); NBFCs +5pp (higher risk appetite); fintech flat 50% (low-income book),
+yes,foir_50k_1l,0.55,HDFC-P3,estimate,true,"Not published by YES BANK. Banded FOIR: lenders allow a larger share of income as income rises (more residual income after expenses); base level from HDFC's FOIR article (40-55%, linked)",
+yes,foir_ge_1l,0.6,HDFC-P3,estimate,true,"Not published by YES BANK. Banded FOIR for high earners; base level from HDFC's FOIR article (40-55%, linked)",
+yes,max_income_multiple,24,PNB-P1,estimate,true,"Not published by YES BANK. 24x is the multiple PNB publishes (linked); SBI publishes 30x and the calculators read show 10-20x, so 24x sits mid-range; rarely binds before FOIR",
+yes,processing_fee_pct,0.025,YES-P2,lender_official,false,,
+yes,max_dpd_12m,0,BUREAU-DPD,estimate,true,Not published. Industry practice: banks decline any 30+ DPD in last 12m; NBFC/fintech tolerate up to 30 days. Linked guide confirms high DPD leads to decline but gives no threshold; the day limit is the estimate,
+yes,max_enquiries_6m,4,BUREAU-ENQ,estimate,true,Not published. Credit-hungry flag; banks stricter than NBFC/fintech. Linked guide confirms frequent enquiries can lead to decline but gives no count; the count is the estimate,
+yes,writeoff_allowed,false,BUREAU-WO,estimate,true,Not published. Written-off/settled accounts are a standard knock-out at all lenders. Linked guide: lenders may refuse a loan with a written-off or settled account,
+sbi,min_income_metro,25000,SBI-P2,lender_official,false,,Corporate sector employees
+sbi,min_income_non_metro,25000,SBI-P2,lender_official,false,,Corporate sector employees
+sbi,max_age_at_maturity,60,SBI-P2,lender_official,false,,Loan to close by retirement / 60 years
+sbi,allowed_employer_categories,govt|psu|mnc|listed|pvt_ltd,SBI-P2,lender_official,false,,"Government (central/state/railway/police/PSU), defence and corporate sector"
+sbi,salary_account_required,true,SBI-P2,lender_official,false,,'Employee should have Salary Package Account with SBI'
+sbi,self_employed_allowed,false,SBI-P4,lender_official,false,,Salaried employees only
+sbi,foir_lt_50k,0.65,SBI-P2,lender_official,false,,'subject to EMI/NMI Ratio upto 65%'
+sbi,foir_50k_1l,0.65,SBI-P2,lender_official,false,,'subject to EMI/NMI Ratio upto 65%'
+sbi,foir_ge_1l,0.65,SBI-P2,lender_official,false,,'subject to EMI/NMI Ratio upto 65%'
+sbi,max_income_multiple,30,SBI-P2,lender_official,false,,"'& 30-times NMI, whichever is lower'"
+sbi,max_loan_amount,5000000,SBI-P2,lender_official,false,,
+sbi,min_tenure_months,6,SBI-P2,lender_official,false,,
+sbi,max_tenure_months,84,SBI-P2,lender_official,false,,
+sbi,rate_min_pct,10.0,SBI-P3,lender_official,false,,
+sbi,rate_max_pct,15.0,SBI-P3,lender_official,false,,
+sbi,processing_fee_pct,0.015,SBI-P2,lender_official,false,,"Min Rs 1,000"
+sbi,min_age,21,SBI-P2,lender_official,false,,
+sbi,max_age_at_maturity_se,65,BOB-P2,estimate,true,"Not published by State Bank of India. psu bank default, the value Bank of Baroda publishes for this rule (linked)",
+sbi,min_total_exp_months,12,BOB-P2,estimate,true,"Not published by State Bank of India. psu bank default, the value Bank of Baroda publishes for this rule (linked)",
+sbi,min_current_job_months,12,SBI-P2,lender_official,false,,Corporate sector minimum service
+sbi,min_credit_score,700,PNB-A3,estimate,true,"Not published by State Bank of India. psu bank default, the value Punjab National Bank publishes for this rule (linked)",
+sbi,ntc_allowed,false,BUREAU-SCORE,estimate,true,Lender-type default (psu bank). Linked guide: most lenders want 700+ and no-score applicants may be rejected; this lender's own stance is not published,
+sbi,se_min_age,25,INDUSIND-P1,estimate,true,"Not published by State Bank of India. psu bank default, the value IndusInd Bank publishes for this rule (linked)",
+sbi,se_min_vintage_months,36,HDB-P2,estimate,true,"Not published by State Bank of India. psu bank default, the value HDB Financial Services publishes for this rule (linked)",
+sbi,se_min_annual_income,300000,SBI-P2,estimate,true,State Bank of India's eligibility page (linked) is silent on this rule. Lender-type default (psu bank),
+sbi,min_loan_amount,100000,SBI-P2,lender_official,false,,
+sbi,max_dpd_12m,0,BUREAU-DPD,estimate,true,Not published. Industry practice: banks decline any 30+ DPD in last 12m; NBFC/fintech tolerate up to 30 days. Linked guide confirms high DPD leads to decline but gives no threshold; the day limit is the estimate,
+sbi,max_enquiries_6m,4,BUREAU-ENQ,estimate,true,Not published. Credit-hungry flag; banks stricter than NBFC/fintech. Linked guide confirms frequent enquiries can lead to decline but gives no count; the count is the estimate,
+sbi,writeoff_allowed,false,BUREAU-WO,estimate,true,Not published. Written-off/settled accounts are a standard knock-out at all lenders. Linked guide: lenders may refuse a loan with a written-off or settled account,
+sbi,min_current_job_months@govt,6,SBI-P2,lender_official,false,,Government / defence minimum service
+sbi,min_income_metro@govt,20000,SBI-P2,lender_official,false,,Government / defence employees
+sbi,min_income_non_metro@govt,20000,SBI-P2,lender_official,false,,Government / defence employees
+sbi,rate_avg_pct,11.54,SBI-P3,lender_official,false,,Mean ROI Q1 FY2026-27
+sbi,processing_fee_cap,15000,SBI-P2,lender_official,false,,
+sbi,processing_fee_pct@govt,0.0075,SBI-P2,lender_official,false,,50% waiver for government sector employees
+bob,min_age,21,BOB-P2,lender_official,false,,
+bob,max_age_at_maturity,60,BOB-P2,lender_official,false,,Age plus repayment period within retirement age or 60
+bob,max_age_at_maturity_se,65,BOB-P2,lender_official,false,,
+bob,min_income_metro,0,BOB-P1,lender_official,false,,'There is no such stipulation' of a minimum salary; repayment capacity (FOIR) decides
+bob,min_income_non_metro,0,BOB-P1,lender_official,false,,As above
+bob,min_loan_amount,100000,BOB-P2,lender_official,false,,Metro and urban branches
+bob,max_loan_amount,200000,BOB-P2,lender_official,false,,Private-sector and self-employed applicants without 6 months' BoB relationship
+bob,min_loan_amount_non_metro,50000,BOB-P2,lender_official,false,,Rural and semi-urban branches
+bob,max_loan_amount_non_metro,1500000,BOB-P1,lender_official,false,,
+bob,max_tenure_months,60,BOB-P2,lender_official,false,,48-60 months for other applicants
+bob,rate_min_pct,13.9,BOB-P2,lender_official,false,,"Category A (no BoB relationship), floating, CIBIL-linked"
+bob,rate_max_pct,17.5,BOB-P2,lender_official,false,,
+bob,min_total_exp_months,12,BOB-P2,lender_official,false,,Only continuous service is stated
+bob,min_current_job_months,12,BOB-P2,lender_official,false,,Minimum continuous service 1 year
+bob,min_credit_score,701,BOB-P1,lender_official,false,,'CIBIL score must be above 701 and above'
+bob,ntc_allowed,false,BUREAU-SCORE,estimate,true,Lender-type default (psu bank). Linked guide: most lenders want 700+ and no-score applicants may be rejected; this lender's own stance is not published,
+bob,self_employed_allowed,true,BOB-P2,lender_official,false,,
+bob,se_min_age,25,INDUSIND-P1,estimate,true,"Not published by Bank of Baroda. psu bank default, the value IndusInd Bank publishes for this rule (linked)",
+bob,se_min_vintage_months,12,BOB-P2,lender_official,false,,Minimum 1 year stable business
+bob,se_min_annual_income,300000,BOB-P2,estimate,true,Bank of Baroda's eligibility page (linked) is silent on this rule. Lender-type default (psu bank),
+bob,allowed_employer_categories,govt|psu|mnc|listed|pvt_ltd|llp,BOB-P2,lender_official,false,,"Govt, PSU, public ltd/MNC, educational institutions, private ltd, trusts, LLPs"
+bob,salary_account_required,false,PNB-N1,estimate,true,"Not published by Bank of Baroda. psu bank default, the value Punjab National Bank publishes for this rule (linked)",
+bob,foir_lt_50k,0.4,BOB-P2,estimate,true,"BoB: '40% of GMI to 70% of GMI depending upon the income'; mapped low to high across income bands (BoB uses gross income, the model uses net)",
+bob,foir_50k_1l,0.55,BOB-P2,estimate,true,"BoB: '40% of GMI to 70% of GMI depending upon the income'; mapped low to high across income bands (BoB uses gross income, the model uses net)",
+bob,foir_ge_1l,0.7,BOB-P2,estimate,true,"BoB: '40% of GMI to 70% of GMI depending upon the income'; mapped low to high across income bands (BoB uses gross income, the model uses net)",
+bob,min_tenure_months,12,HDB-P1,estimate,true,"Not published by Bank of Baroda. psu bank default, the value HDB Financial Services publishes for this rule (linked)",
+bob,processing_fee_pct,0.02,BOB-P2,lender_official,false,,"1%-2% + GST, min Rs 1,000"
+bob,max_dpd_12m,0,BUREAU-DPD,estimate,true,Not published. Industry practice: banks decline any 30+ DPD in last 12m; NBFC/fintech tolerate up to 30 days. Linked guide confirms high DPD leads to decline but gives no threshold; the day limit is the estimate,
+bob,max_enquiries_6m,4,BUREAU-ENQ,estimate,true,Not published. Credit-hungry flag; banks stricter than NBFC/fintech. Linked guide confirms frequent enquiries can lead to decline but gives no count; the count is the estimate,
+bob,writeoff_allowed,false,BUREAU-WO,estimate,true,Not published. Written-off/settled accounts are a standard knock-out at all lenders. Linked guide: lenders may refuse a loan with a written-off or settled account,
+bob,max_loan_amount@rel,2000000,BOB-P2,lender_official,false,,With BoB account relationship
+bob,max_loan_amount@govt,2000000,BOB-P2,lender_official,false,,"Govt employees, salary with BoB or another bank"
+bob,foir_lt_50k@govt,0.7,BOB-P2,lender_official,false,,70% of GMI: govt/PSU employees with salary account in another bank
+bob,foir_lt_50k@govt_rel,0.75,BOB-P2,lender_official,false,,75% of GMI: govt/PSU employees with BoB salary account
+bob,foir_50k_1l@govt,0.7,BOB-P2,lender_official,false,,70% of GMI: govt/PSU employees with salary account in another bank
+bob,foir_50k_1l@govt_rel,0.75,BOB-P2,lender_official,false,,75% of GMI: govt/PSU employees with BoB salary account
+bob,foir_ge_1l@govt,0.7,BOB-P2,lender_official,false,,70% of GMI: govt/PSU employees with salary account in another bank
+bob,foir_ge_1l@govt_rel,0.75,BOB-P2,lender_official,false,,75% of GMI: govt/PSU employees with BoB salary account
+bob,max_tenure_months@govt,72,BOB-P2,lender_official,false,,
+bob,max_tenure_months@govt_rel,84,BOB-P2,lender_official,false,,
+bob,rate_min_pct@rel,11.9,BOB-P2,lender_official,false,,Category B (BoB relationship)
+bob,rate_max_pct@rel,15.5,BOB-P2,lender_official,false,,
+bob,rate_min_pct@govt,11.15,BOB-P2,lender_official,false,,Silver: govt employees with salary in another bank
+bob,rate_max_pct@govt,15.5,BOB-P2,lender_official,false,,
+bob,rate_min_pct@govt_rel,10.65,BOB-P2,lender_official,false,,Gold: govt employees with BoB salary account
+bob,rate_max_pct@govt_rel,15.5,BOB-P2,lender_official,false,,
+bob,processing_fee_cap,10000,BOB-P2,lender_official,false,,
+bob,processing_fee_pct@govt_rel,0.0,BOB-P2,lender_official,false,,NIL for govt employees with BoB salary account
+pnb,min_age,21,PNB-A1,aggregator,false,,
+pnb,max_age_at_maturity,60,PNB-N1,aggregator,false,,
+pnb,max_age_at_maturity_se,65,PNB-P1,lender_official,false,,
+pnb,min_income_metro,15000,PNB-A1,aggregator,false,,
+pnb,min_income_non_metro,12500,PNB-A1,aggregator,false,,
+pnb,min_total_exp_months,24,PNB-A1,aggregator,false,,
+pnb,min_credit_score,700,PNB-A3,aggregator,false,,
+pnb,self_employed_allowed,true,PNB-P1,lender_official,false,,"Self-employed professionals only (CA/CS, engineers, software developers etc.), metro/urban branches"
+pnb,max_loan_amount,1000000,PNB-N1,aggregator,false,,
+pnb,max_tenure_months,72,PNB-N1,aggregator,false,,
+pnb,rate_min_pct,11.6,PNB-A3,aggregator,false,,
+pnb,rate_max_pct,13.6,PNB-A3,aggregator,false,,
+pnb,min_current_job_months,6,ABCL-P2,estimate,true,"Not published by Punjab National Bank. psu bank default, the value Aditya Birla Capital publishes for this rule (linked)",
+pnb,ntc_allowed,true,PNB-A3,aggregator,false,,'-1/0/no hit' priced in the 700-749 band
+pnb,se_min_age,25,INDUSIND-P1,estimate,true,"Not published by Punjab National Bank. psu bank default, the value IndusInd Bank publishes for this rule (linked)",
+pnb,se_min_vintage_months,36,HDB-P2,estimate,true,"Not published by Punjab National Bank. psu bank default, the value HDB Financial Services publishes for this rule (linked)",
+pnb,se_min_annual_income,600000,PNB-P1,lender_official,false,,Gross annual income for the last two years
+pnb,allowed_employer_categories,any,PNB-P1,estimate,true,"The PNB scheme page (linked) limits its salary-account scheme to govt/PSU/reputed companies, but its 'others need 3 years' clause means others are accepted too; Swaagat, the new-to-bank base product, states no employer restriction, read as any. Lender-type default (psu bank)",
+pnb,salary_account_required,false,PNB-N1,aggregator,false,,Swaagat is for new-to-bank customers; PNB salary-account holders use the public scheme (@rel rows)
+pnb,foir_lt_50k,0.5,HDFC-P3,estimate,true,Not published by Punjab National Bank. Banks: HDFC FOIR blog (40-55%) and benchmark calculator CALC-B1 (50%); NBFCs +5pp (higher risk appetite); fintech flat 50% (low-income book),
+pnb,foir_50k_1l,0.55,HDFC-P3,estimate,true,"Not published by Punjab National Bank. Banded FOIR: lenders allow a larger share of income as income rises (more residual income after expenses); base level from HDFC's FOIR article (40-55%, linked)",
+pnb,foir_ge_1l,0.6,HDFC-P3,estimate,true,"Not published by Punjab National Bank. Banded FOIR for high earners; base level from HDFC's FOIR article (40-55%, linked)",
+pnb,max_income_multiple,10,PNB-N1,aggregator,false,,Lower of Rs 10 lakh or 10x average net salary of last 10 of 12 months
+pnb,min_loan_amount,25000,PNB-N1,aggregator,false,,
+pnb,min_tenure_months,12,HDB-P1,estimate,true,"Not published by Punjab National Bank. psu bank default, the value HDB Financial Services publishes for this rule (linked)",
+pnb,processing_fee_pct,0.005,PNB-N1,aggregator,false,,"0.50%, min Rs 500"
+pnb,max_dpd_12m,0,BUREAU-DPD,estimate,true,Not published. Industry practice: banks decline any 30+ DPD in last 12m; NBFC/fintech tolerate up to 30 days. Linked guide confirms high DPD leads to decline but gives no threshold; the day limit is the estimate,
+pnb,max_enquiries_6m,4,BUREAU-ENQ,estimate,true,Not published. Credit-hungry flag; banks stricter than NBFC/fintech. Linked guide confirms frequent enquiries can lead to decline but gives no count; the count is the estimate,
+pnb,writeoff_allowed,false,BUREAU-WO,estimate,true,Not published. Written-off/settled accounts are a standard knock-out at all lenders. Linked guide: lenders may refuse a loan with a written-off or settled account,
+pnb,rate_by_score,800:11.60|750:12.60|700:13.60,PNB-A3,aggregator,false,,Rates as of 15-Sep-2025; the 700-749 band includes no-hit / new-to-credit
+pnb,max_loan_amount@rel,2000000,PNB-P1,lender_official,false,,
+pnb,max_income_multiple@rel,24,PNB-P1,lender_official,false,,24x gross monthly salary (the model applies it to net salary)
+pnb,min_total_exp_months@rel,24,PNB-P1,lender_official,false,,2 years' service for govt/PSU/reputed companies (3 years for others)
+pnb,rate_by_score@rel,none,PNB-P1,estimate,true,"The public scheme is not priced by CIBIL band, so the Swaagat bands are switched off",
+pnb,rate_min_pct@rel,10.6,PNB-A3,aggregator,false,,'from 10.60%' (2026 page)
+pnb,rate_max_pct@rel,14.35,PNB-A3,aggregator,false,,Upper end quoted for govt employees
+pnb,se_min_credit_score,750,PNB-P1,lender_official,false,,
+bajaj,min_age,21,BAJAJ-P1,lender_official,false,,
+bajaj,max_age_at_maturity,80,BAJAJ-P1,lender_official,false,,At end of tenure
+bajaj,min_income_non_metro,25001,BAJAJ-P1,lender_official,false,,"'Starting Rs 25,001 based on city'"
+bajaj,min_income_metro,35000,BAJAJ-P1,estimate,true,"Page says floor rises by city; metro estimated at Rs 35,000",
+bajaj,allowed_employer_categories,govt|psu|mnc|listed|pvt_ltd,BAJAJ-P4,lender_official,false,,"'Employed with: Public, private, or MNC'"
+bajaj,min_credit_score,650,BAJAJ-P4,lender_official,false,,
+bajaj,self_employed_allowed,true,BAJAJ-P4,lender_official,false,,'Customer profile: Self-employed or Salaried'
+bajaj,max_tenure_months,108,BAJAJ-P4,lender_official,false,,'The maximum personal loan tenure you can apply for is 108 months'
+bajaj,rate_min_pct,10.0,BAJAJ-P4,lender_official,false,,
+bajaj,rate_max_pct,30.5,BAJAJ-P4,lender_official,false,,
+bajaj,processing_fee_pct,0.035,BAJAJ-P4,lender_official,false,,Up to 4.13% including taxes = 3.5% + GST
+bajaj,min_loan_amount,40000,BAJAJ-P4,lender_official,false,,
+bajaj,max_loan_amount,5500000,BAJAJ-P4,lender_official,false,,
+bajaj,max_age_at_maturity_se,65,HDB-P2,estimate,true,"Not published by Bajaj Finance. nbfc default, the value HDB Financial Services publishes for this rule (linked)",
+bajaj,min_total_exp_months,12,ABCL-P2,estimate,true,"Not published by Bajaj Finance. nbfc default, the value Aditya Birla Capital publishes for this rule (linked)",
+bajaj,min_current_job_months,3,BAJAJ-P4,estimate,true,Bajaj Finance's eligibility page (linked) is silent on this rule. Lender-type default (nbfc),
+bajaj,ntc_allowed,false,BUREAU-SCORE,estimate,true,Lender-type default (nbfc). Linked guide: most lenders want 700+ and no-score applicants may be rejected; this lender's own stance is not published,
+bajaj,se_min_age,25,INDUSIND-P1,estimate,true,"Not published by Bajaj Finance. nbfc default, the value IndusInd Bank publishes for this rule (linked)",
+bajaj,se_min_vintage_months,36,HDB-P2,estimate,true,"Not published by Bajaj Finance. nbfc default, the value HDB Financial Services publishes for this rule (linked)",
+bajaj,se_min_annual_income,300000,BAJAJ-P4,estimate,true,Bajaj Finance's eligibility page (linked) is silent on this rule. Lender-type default (nbfc),
+bajaj,salary_account_required,false,PNB-N1,estimate,true,"Not published by Bajaj Finance. nbfc default, the value Punjab National Bank publishes for this rule (linked)",
+bajaj,foir_lt_50k,0.75,BAJAJ-C1,lender_official,false,,"Calculator code: (75% - expenses/income) x income is the EMI room, at every income"
+bajaj,foir_50k_1l,0.75,BAJAJ-C1,lender_official,false,,"Calculator code: (75% - expenses/income) x income is the EMI room, at every income"
+bajaj,foir_ge_1l,0.75,BAJAJ-C1,lender_official,false,,"Calculator code: (75% - expenses/income) x income is the EMI room, at every income"
+bajaj,max_income_multiple,10,BAJAJ-C1,lender_official,false,,Calculator code: capped at 10x monthly income
+bajaj,min_tenure_months,12,HDB-P1,estimate,true,"Not published by Bajaj Finance. nbfc default, the value HDB Financial Services publishes for this rule (linked)",
+bajaj,max_dpd_12m,30,BUREAU-DPD,estimate,true,Not published. Industry practice: banks decline any 30+ DPD in last 12m; NBFC/fintech tolerate up to 30 days. Linked guide confirms high DPD leads to decline but gives no threshold; the day limit is the estimate,
+bajaj,max_enquiries_6m,6,BUREAU-ENQ,estimate,true,Not published. Credit-hungry flag; banks stricter than NBFC/fintech. Linked guide confirms frequent enquiries can lead to decline but gives no count; the count is the estimate,
+bajaj,writeoff_allowed,false,BUREAU-WO,estimate,true,Not published. Written-off/settled accounts are a standard knock-out at all lenders. Linked guide: lenders may refuse a loan with a written-off or settled account,
+tata,min_age,21,TATA-P1,lender_official,false,,
+tata,max_age_at_maturity,58,TATA-P3,lender_official,false,,
+tata,min_income_metro,20000,TATA-P3,lender_official,false,,
+tata,min_income_non_metro,20000,TATA-P3,lender_official,false,,
+tata,min_total_exp_months,24,TATA-P3,lender_official,false,,
+tata,min_current_job_months,12,TATA-P3,lender_official,false,,
+tata,self_employed_allowed,true,TATA-A1,aggregator,false,,
+tata,se_min_credit_score,750,TATA-A1,aggregator,false,,750+ preferred for SE
+tata,min_loan_amount,40000,TATA-P2,lender_official,false,,
+tata,max_loan_amount,3500000,TATA-P3,lender_official,false,,
+tata,max_tenure_months,72,TATA-P3,lender_official,false,,
+tata,rate_min_pct,10.99,TATA-P3,lender_official,false,,
+tata,processing_fee_pct,0.05,TATA-P3,lender_official,false,,Up to 5% + GST
+tata,max_age_at_maturity_se,65,HDB-P2,estimate,true,"Not published by Tata Capital. nbfc default, the value HDB Financial Services publishes for this rule (linked)",
+tata,min_credit_score,725,TATA-P3,lender_official,false,,'725+ preferred'
+tata,ntc_allowed,false,BUREAU-SCORE,estimate,true,Lender-type default (nbfc). Linked guide: most lenders want 700+ and no-score applicants may be rejected; this lender's own stance is not published,
+tata,se_min_age,25,INDUSIND-P1,estimate,true,"Not published by Tata Capital. nbfc default, the value IndusInd Bank publishes for this rule (linked)",
+tata,se_min_vintage_months,36,HDB-P2,estimate,true,"Not published by Tata Capital. nbfc default, the value HDB Financial Services publishes for this rule (linked)",
+tata,se_min_annual_income,300000,TATA-P3,estimate,true,Tata Capital's eligibility page (linked) is silent on this rule. Lender-type default (nbfc),
+tata,allowed_employer_categories,any,TATA-P3,estimate,true,"Tata Capital's eligibility page (linked) lists no employer restriction, read as any. Lender-type default (nbfc)",
+tata,salary_account_required,false,PNB-N1,estimate,true,"Not published by Tata Capital. nbfc default, the value Punjab National Bank publishes for this rule (linked)",
+tata,min_tenure_months,12,HDB-P1,estimate,true,"Not published by Tata Capital. nbfc default, the value HDB Financial Services publishes for this rule (linked)",
+tata,rate_max_pct,26.0,TATA-P3,estimate,true,Tata Capital's eligibility page (linked) is silent on this rule. Upper end not published; set to typical rack-rate ceiling for this lender type,
+tata,max_dpd_12m,30,BUREAU-DPD,estimate,true,Not published. Industry practice: banks decline any 30+ DPD in last 12m; NBFC/fintech tolerate up to 30 days. Linked guide confirms high DPD leads to decline but gives no threshold; the day limit is the estimate,
+tata,max_enquiries_6m,6,BUREAU-ENQ,estimate,true,Not published. Credit-hungry flag; banks stricter than NBFC/fintech. Linked guide confirms frequent enquiries can lead to decline but gives no count; the count is the estimate,
+tata,writeoff_allowed,false,BUREAU-WO,estimate,true,Not published. Written-off/settled accounts are a standard knock-out at all lenders. Linked guide: lenders may refuse a loan with a written-off or settled account,
+tata,foir_bands,25000:0.5|50000:0.6|75000:0.65|*:0.75,TATA-C1,lender_official,false,,"Calculator code: 50% to Rs 25,000, 60% to 50,000, 65% to 75,000, 75% above (existing EMIs inside FOIR)"
+tata,income_multiple_by_tenure,12:6/7/7|24:10/13/13|36:14/18/18|48:17/22/23|*:20/23/27,TATA-C1,lender_official,false,,"Calculator code, 'cat a' employers (the model has no Tata employer list): x income by tenure and income band; the calculator stops at 60 months, so 61-72 months reuse the 60-month row"
+tata,income_multiple_income_bands,49999|75000,TATA-C1,lender_official,false,,Calculator income bands: <50k / 50-75k / >75k
+abcl,min_age,21,ABCL-P4,lender_official,false,,21 or 23 depending on loan type
+abcl,max_age_at_maturity,60,ABCL-P4,lender_official,false,,Extendable to 62 for some loan types
+abcl,min_income_metro,20000,ABCL-P3,lender_official,false,,Educational page
+abcl,min_income_non_metro,15000,ABCL-P3,lender_official,false,,
+abcl,min_total_exp_months,12,ABCL-P2,lender_official,false,,
+abcl,min_current_job_months,6,ABCL-P2,lender_official,false,,
+abcl,min_credit_score,700,ABCL-P4,lender_official,false,,Eligibility page: 700+; the Rs 5 lakh product page says 750+
+abcl,self_employed_allowed,false,ABCL-P1,lender_official,false,,Eligibility shown for salaried
+abcl,min_loan_amount,50000,ABCL-P1,lender_official,false,,
+abcl,max_tenure_months,84,ABCL-P4,lender_official,false,,Tenure 1-7 years
+abcl,rate_min_pct,13.0,ABCL-P1,estimate,true,Reference rates 19.45-20.45% (Mar 2024) are old; band set around them,
+abcl,rate_max_pct,28.0,ABCL-P1,estimate,true,As above,
+abcl,processing_fee_pct,0.04,ABCL-P1,lender_official,false,,
+abcl,max_age_at_maturity_se,65,HDB-P2,estimate,true,"Not published by Aditya Birla Capital. nbfc default, the value HDB Financial Services publishes for this rule (linked)",
+abcl,ntc_allowed,false,BUREAU-SCORE,estimate,true,Lender-type default (nbfc). Linked guide: most lenders want 700+ and no-score applicants may be rejected; this lender's own stance is not published,
+abcl,se_min_age,25,INDUSIND-P1,estimate,true,"Not published by Aditya Birla Capital. nbfc default, the value IndusInd Bank publishes for this rule (linked)",
+abcl,se_min_vintage_months,36,HDB-P2,estimate,true,"Not published by Aditya Birla Capital. nbfc default, the value HDB Financial Services publishes for this rule (linked)",
+abcl,se_min_annual_income,300000,ABCL-P4,estimate,true,Aditya Birla Capital's eligibility page (linked) is silent on this rule. Lender-type default (nbfc),
+abcl,allowed_employer_categories,any,ABCL-P4,estimate,true,"Aditya Birla Capital's eligibility page (linked) lists no employer restriction, read as any. Lender-type default (nbfc)",
+abcl,salary_account_required,false,PNB-N1,estimate,true,"Not published by Aditya Birla Capital. nbfc default, the value Punjab National Bank publishes for this rule (linked)",
+abcl,max_loan_amount,5000000,ABCL-C1,lender_official,false,,Calculator cap Rs 50 lakh (was a lender-type estimate of Rs 40 lakh)
+abcl,min_tenure_months,12,HDB-P1,estimate,true,"Not published by Aditya Birla Capital. nbfc default, the value HDB Financial Services publishes for this rule (linked)",
+abcl,max_dpd_12m,30,BUREAU-DPD,estimate,true,Not published. Industry practice: banks decline any 30+ DPD in last 12m; NBFC/fintech tolerate up to 30 days. Linked guide confirms high DPD leads to decline but gives no threshold; the day limit is the estimate,
+abcl,max_enquiries_6m,6,BUREAU-ENQ,estimate,true,Not published. Credit-hungry flag; banks stricter than NBFC/fintech. Linked guide confirms frequent enquiries can lead to decline but gives no count; the count is the estimate,
+abcl,writeoff_allowed,false,BUREAU-WO,estimate,true,Not published. Written-off/settled accounts are a standard knock-out at all lenders. Linked guide: lenders may refuse a loan with a written-off or settled account,
+abcl,foir_bands,74999:0.65|149999:0.7|*:0.75,ABCL-C1,lender_official,false,,"Calculator: 65% below Rs 75,000, 70% below 1.5 lakh, 75% above"
+abcl,income_multiple_by_tenure,12:4|24:8|36:11|48:14|60:17|72:20|*:23,ABCL-C1,lender_official,false,,Calculator: 4x for 1 year up to 23x for 7 years
+abcl,income_multiple_net_of_emi,true,ABCL-C1,lender_official,false,,Calculator: multiple applies to income minus existing EMIs
+hdb,min_age,21,HDB-A1,aggregator,false,,
+hdb,max_age_at_maturity,60,HDB-P1,lender_official,false,,"Or retirement, whichever is earlier"
+hdb,min_income_metro,20000,HDB-P1,lender_official,false,,"Ahmedabad, Bangalore, Chennai, Delhi, Hyderabad, Kolkata, Mumbai, Pune"
+hdb,min_income_non_metro,15000,HDB-P1,lender_official,false,,
+hdb,min_total_exp_months,12,HDB-P1,lender_official,false,,1-2 years depending on organisation category
+hdb,min_current_job_months,1,HDB-P1,lender_official,false,,Minimum 1 month salary credit in current organisation
+hdb,self_employed_allowed,true,HDB-A1,aggregator,false,,
+hdb,se_min_age,22,HDB-P2,lender_official,false,,
+hdb,se_min_vintage_months,36,HDB-P2,lender_official,false,,Professionals 3 years; other self-employed 4 years
+hdb,se_min_annual_income,100000,HDB-A1,aggregator,false,,As published (metro)
+hdb,max_loan_amount,1000000,HDB-P1,lender_official,false,,Salaried PL up to Rs 10 lakh (PL overall up to Rs 20 lakh)
+hdb,min_tenure_months,12,HDB-P1,lender_official,false,,
+hdb,max_tenure_months,60,HDB-P1,lender_official,false,,
+hdb,rate_min_pct,10.0,HDB-A2,aggregator,false,,
+hdb,rate_max_pct,36.0,HDB-A2,aggregator,false,,
+hdb,processing_fee_pct,0.03,HDB-A2,aggregator,false,,
+hdb,max_age_at_maturity_se,65,HDB-P2,lender_official,false,,
+hdb,min_credit_score,700,ABCL-P4,estimate,true,"Not published by HDB Financial Services. nbfc default, the value Aditya Birla Capital publishes for this rule (linked)",
+hdb,ntc_allowed,false,BUREAU-SCORE,estimate,true,Lender-type default (nbfc). Linked guide: most lenders want 700+ and no-score applicants may be rejected; this lender's own stance is not published,
+hdb,allowed_employer_categories,any,HDB-P1,estimate,true,"HDB Financial Services's eligibility page (linked) lists no employer restriction, read as any. Lender-type default (nbfc)",
+hdb,salary_account_required,false,PNB-N1,estimate,true,"Not published by HDB Financial Services. nbfc default, the value Punjab National Bank publishes for this rule (linked)",
+hdb,foir_lt_50k,0.55,HDFC-P3,estimate,true,Not published by HDB Financial Services. Banks: HDFC FOIR blog (40-55%) and benchmark calculator CALC-B1 (50%); NBFCs +5pp (higher risk appetite); fintech flat 50% (low-income book),
+hdb,foir_50k_1l,0.6,HDFC-P3,estimate,true,"Not published by HDB Financial Services. Banded FOIR: lenders allow a larger share of income as income rises (more residual income after expenses); base level from HDFC's FOIR article (40-55%, linked)",
+hdb,foir_ge_1l,0.65,HDFC-P3,estimate,true,"Not published by HDB Financial Services. Banded FOIR for high earners; base level from HDFC's FOIR article (40-55%, linked)",
+hdb,max_income_multiple,24,PNB-P1,estimate,true,"Not published by HDB Financial Services. 24x is the multiple PNB publishes (linked); SBI publishes 30x and the calculators read show 10-20x, so 24x sits mid-range; rarely binds before FOIR",
+hdb,min_loan_amount,50000,ABCL-P1,estimate,true,"Not published by HDB Financial Services. nbfc default, the value Aditya Birla Capital publishes for this rule (linked)",
+hdb,max_dpd_12m,30,BUREAU-DPD,estimate,true,Not published. Industry practice: banks decline any 30+ DPD in last 12m; NBFC/fintech tolerate up to 30 days. Linked guide confirms high DPD leads to decline but gives no threshold; the day limit is the estimate,
+hdb,max_enquiries_6m,6,BUREAU-ENQ,estimate,true,Not published. Credit-hungry flag; banks stricter than NBFC/fintech. Linked guide confirms frequent enquiries can lead to decline but gives no count; the count is the estimate,
+hdb,writeoff_allowed,false,BUREAU-WO,estimate,true,Not published. Written-off/settled accounts are a standard knock-out at all lenders. Linked guide: lenders may refuse a loan with a written-off or settled account,
+hdb,max_age_at_maturity@govt,65,HDB-P1,lender_official,false,,Government employees (conditions apply)
+poonawalla,min_age,21,POONAWALLA-P2,lender_official,false,,
+poonawalla,max_age_at_maturity,60,POONAWALLA-P5,lender_official,false,,
+poonawalla,min_income_metro,30000,POONAWALLA-P1,lender_official,false,,
+poonawalla,min_income_non_metro,30000,POONAWALLA-P1,lender_official,false,,
+poonawalla,min_total_exp_months,12,POONAWALLA-P5,lender_official,false,,
+poonawalla,allowed_employer_categories,govt|psu|mnc|listed|pvt_ltd|llp,POONAWALLA-P1,lender_official,false,,
+poonawalla,self_employed_allowed,false,POONAWALLA-P1,lender_official,false,,Salaried product
+poonawalla,max_loan_amount,1500000,POONAWALLA-P4,lender_official,false,,
+poonawalla,max_tenure_months,84,POONAWALLA-P4,lender_official,false,,
+poonawalla,rate_min_pct,9.99,POONAWALLA-P4,lender_official,false,,
+poonawalla,processing_fee_pct,0.04,POONAWALLA-P4,lender_official,false,,Up to 4% + taxes
+poonawalla,max_age_at_maturity_se,65,HDB-P2,estimate,true,"Not published by Poonawalla Fincorp. nbfc default, the value HDB Financial Services publishes for this rule (linked)",
+poonawalla,min_current_job_months,1,POONAWALLA-P5,lender_official,false,,
+poonawalla,min_credit_score,700,POONAWALLA-P5,lender_official,false,,
+poonawalla,ntc_allowed,false,BUREAU-SCORE,estimate,true,Lender-type default (nbfc). Linked guide: most lenders want 700+ and no-score applicants may be rejected; this lender's own stance is not published,
+poonawalla,se_min_age,25,INDUSIND-P1,estimate,true,"Not published by Poonawalla Fincorp. nbfc default, the value IndusInd Bank publishes for this rule (linked)",
+poonawalla,se_min_vintage_months,36,HDB-P2,estimate,true,"Not published by Poonawalla Fincorp. nbfc default, the value HDB Financial Services publishes for this rule (linked)",
+poonawalla,se_min_annual_income,300000,POONAWALLA-P5,estimate,true,Poonawalla Fincorp's eligibility page (linked) is silent on this rule. Lender-type default (nbfc),
+poonawalla,salary_account_required,false,PNB-N1,estimate,true,"Not published by Poonawalla Fincorp. nbfc default, the value Punjab National Bank publishes for this rule (linked)",
+poonawalla,foir_lt_50k,0.55,POONAWALLA-C1,lender_official,false,,"Calculator: 55% at Rs 30,000-50,000 (EMIs subtracted inside FOIR)"
+poonawalla,foir_50k_1l,0.65,POONAWALLA-C1,lender_official,false,,"Calculator: 65% from Rs 55,000"
+poonawalla,foir_ge_1l,0.65,POONAWALLA-C1,lender_official,false,,Calculator: 65% at Rs 1 lakh; above that its own Rs 20 lakh cap binds
+poonawalla,min_loan_amount,50000,ABCL-P1,estimate,true,"Not published by Poonawalla Fincorp. nbfc default, the value Aditya Birla Capital publishes for this rule (linked)",
+poonawalla,min_tenure_months,12,HDB-P1,estimate,true,"Not published by Poonawalla Fincorp. nbfc default, the value HDB Financial Services publishes for this rule (linked)",
+poonawalla,rate_max_pct,26.0,POONAWALLA-P5,estimate,true,Poonawalla Fincorp's eligibility page (linked) is silent on this rule. Upper end not published; set to typical rack-rate ceiling for this lender type,
+poonawalla,max_dpd_12m,30,BUREAU-DPD,estimate,true,Not published. Industry practice: banks decline any 30+ DPD in last 12m; NBFC/fintech tolerate up to 30 days. Linked guide confirms high DPD leads to decline but gives no threshold; the day limit is the estimate,
+poonawalla,max_enquiries_6m,6,BUREAU-ENQ,estimate,true,Not published. Credit-hungry flag; banks stricter than NBFC/fintech. Linked guide confirms frequent enquiries can lead to decline but gives no count; the count is the estimate,
+poonawalla,writeoff_allowed,false,BUREAU-WO,estimate,true,Not published. Written-off/settled accounts are a standard knock-out at all lenders. Linked guide: lenders may refuse a loan with a written-off or settled account,
+lt,min_age,21,LT-P1,lender_official,false,,
+lt,max_age_at_maturity,58,LT-P1,lender_official,false,,
+lt,min_income_metro,25000,LT-P2,lender_official,false,,Tier-1 cities
+lt,min_income_non_metro,15000,LT-P1,estimate,true,"'No fixed minimum'; Rs 15,000 assumed outside tier-1",
+lt,self_employed_allowed,true,LT-P1,lender_official,false,,"Business owners, freelancers and self-employed professionals"
+lt,max_loan_amount,3000000,LT-P1,lender_official,false,,
+lt,max_tenure_months,72,LT-P1,lender_official,false,,
+lt,rate_min_pct,10.5,LT-P1,lender_official,false,,
+lt,rate_max_pct,27.0,LT-A1,aggregator,false,,
+lt,processing_fee_pct,0.04,LT-P1,lender_official,false,,
+lt,max_age_at_maturity_se,65,HDB-P2,estimate,true,"Not published by L&T Finance. nbfc default, the value HDB Financial Services publishes for this rule (linked)",
+lt,min_total_exp_months,12,ABCL-P2,estimate,true,"Not published by L&T Finance. nbfc default, the value Aditya Birla Capital publishes for this rule (linked)",
+lt,min_current_job_months,3,LT-P1,estimate,true,L&T Finance's eligibility page (linked) is silent on this rule. Lender-type default (nbfc),
+lt,min_credit_score,700,ABCL-P4,estimate,true,"Not published by L&T Finance. nbfc default, the value Aditya Birla Capital publishes for this rule (linked)",
+lt,ntc_allowed,false,BUREAU-SCORE,estimate,true,Lender-type default (nbfc). Linked guide: most lenders want 700+ and no-score applicants may be rejected; this lender's own stance is not published,
+lt,se_min_age,25,INDUSIND-P1,estimate,true,"Not published by L&T Finance. nbfc default, the value IndusInd Bank publishes for this rule (linked)",
+lt,se_min_vintage_months,36,HDB-P2,estimate,true,"Not published by L&T Finance. nbfc default, the value HDB Financial Services publishes for this rule (linked)",
+lt,se_min_annual_income,300000,LT-P1,estimate,true,L&T Finance's eligibility page (linked) is silent on this rule. Lender-type default (nbfc),
+lt,allowed_employer_categories,any,LT-P1,estimate,true,"L&T Finance's eligibility page (linked) lists no employer restriction, read as any. Lender-type default (nbfc)",
+lt,salary_account_required,false,PNB-N1,estimate,true,"Not published by L&T Finance. nbfc default, the value Punjab National Bank publishes for this rule (linked)",
+lt,foir_lt_50k,0.5,LT-P4,estimate,true,"L&T's eligibility page: most lenders cap FOIR at 50%-55%, its worked example uses 50%",
+lt,foir_50k_1l,0.5,LT-P4,estimate,true,"L&T's eligibility page: most lenders cap FOIR at 50%-55%, its worked example uses 50%",
+lt,foir_ge_1l,0.55,LT-P4,estimate,true,"L&T's eligibility page: most lenders cap FOIR at 50%-55%, its worked example uses 50%",
+lt,max_income_multiple,24,PNB-P1,estimate,true,"Not published by L&T Finance. 24x is the multiple PNB publishes (linked); SBI publishes 30x and the calculators read show 10-20x, so 24x sits mid-range; rarely binds before FOIR",
+lt,min_loan_amount,50000,ABCL-P1,estimate,true,"Not published by L&T Finance. nbfc default, the value Aditya Birla Capital publishes for this rule (linked)",
+lt,min_tenure_months,12,HDB-P1,estimate,true,"Not published by L&T Finance. nbfc default, the value HDB Financial Services publishes for this rule (linked)",
+lt,max_dpd_12m,30,BUREAU-DPD,estimate,true,Not published. Industry practice: banks decline any 30+ DPD in last 12m; NBFC/fintech tolerate up to 30 days. Linked guide confirms high DPD leads to decline but gives no threshold; the day limit is the estimate,
+lt,max_enquiries_6m,6,BUREAU-ENQ,estimate,true,Not published. Credit-hungry flag; banks stricter than NBFC/fintech. Linked guide confirms frequent enquiries can lead to decline but gives no count; the count is the estimate,
+lt,writeoff_allowed,false,BUREAU-WO,estimate,true,Not published. Written-off/settled accounts are a standard knock-out at all lenders. Linked guide: lenders may refuse a loan with a written-off or settled account,
+moneyview,min_age,21,MONEYVIEW-P1,lender_official,false,,
+moneyview,max_age_at_maturity,57,MONEYVIEW-P3,lender_official,false,,
+moneyview,max_age_at_maturity_se,57,MONEYVIEW-P1,lender_official,false,,
+moneyview,min_income_metro,25000,MONEYVIEW-P1,lender_official,false,,
+moneyview,min_income_non_metro,25000,MONEYVIEW-P1,lender_official,false,,
+moneyview,min_credit_score,650,MONEYVIEW-P3,lender_official,false,,
+moneyview,ntc_allowed,true,MONEYVIEW-P1,estimate,true,Own credit model accepts low/thin scores,
+moneyview,self_employed_allowed,true,MONEYVIEW-P3,lender_official,false,,
+moneyview,min_loan_amount,5000,MONEYVIEW-P1,lender_official,false,,
+moneyview,max_loan_amount,1000000,MONEYVIEW-P3,lender_official,false,,
+moneyview,min_tenure_months,3,MONEYVIEW-P3,lender_official,false,,
+moneyview,max_tenure_months,60,MONEYVIEW-P3,lender_official,false,,
+moneyview,rate_min_pct,14.0,MONEYVIEW-P3,lender_official,false,,
+moneyview,rate_max_pct,36.0,MONEYVIEW-P2,estimate,true,APR up to 45% includes fees; interest capped at 36%,
+moneyview,processing_fee_pct,0.02,MONEYVIEW-P3,lender_official,false,,
+moneyview,min_total_exp_months,6,MONEYVIEW-P3,estimate,true,Moneyview's eligibility page (linked) is silent on this rule. Lender-type default (fintech),
+moneyview,min_current_job_months,3,MONEYVIEW-P3,estimate,true,Moneyview's eligibility page (linked) is silent on this rule. Lender-type default (fintech),
+moneyview,se_min_age,23,ICICI-P4,estimate,true,"Not published by Moneyview. fintech default, the value ICICI Bank publishes for this rule (linked)",
+moneyview,se_min_vintage_months,24,ICICI-P4,estimate,true,"Not published by Moneyview. fintech default, the value ICICI Bank publishes for this rule (linked)",
+moneyview,se_min_annual_income,250000,MONEYVIEW-P3,estimate,true,Moneyview's eligibility page (linked) is silent on this rule. Lender-type default (fintech),
+moneyview,allowed_employer_categories,any,MONEYVIEW-P3,estimate,true,"Moneyview's eligibility page (linked) lists no employer restriction, read as any. Lender-type default (fintech)",
+moneyview,salary_account_required,false,PNB-N1,estimate,true,"Not published by Moneyview. fintech default, the value Punjab National Bank publishes for this rule (linked)",
+moneyview,foir_lt_50k,0.5,HDFC-P3,estimate,true,Not published by Moneyview. Banks: HDFC FOIR blog (40-55%) and benchmark calculator CALC-B1 (50%); NBFCs +5pp (higher risk appetite); fintech flat 50% (low-income book),
+moneyview,foir_50k_1l,0.5,HDFC-P3,estimate,true,"Not published by Moneyview. Banded FOIR: lenders allow a larger share of income as income rises (more residual income after expenses); base level from HDFC's FOIR article (40-55%, linked)",
+moneyview,foir_ge_1l,0.55,HDFC-P3,estimate,true,"Not published by Moneyview. Banded FOIR for high earners; base level from HDFC's FOIR article (40-55%, linked)",
+moneyview,max_income_multiple,15,AXIS-C1,estimate,true,"Not published by Moneyview. fintech default, the value Axis Bank publishes for this rule (linked)",
+moneyview,max_dpd_12m,30,BUREAU-DPD,estimate,true,Not published. Industry practice: banks decline any 30+ DPD in last 12m; NBFC/fintech tolerate up to 30 days. Linked guide confirms high DPD leads to decline but gives no threshold; the day limit is the estimate,
+moneyview,max_enquiries_6m,8,BUREAU-ENQ,estimate,true,Not published. Credit-hungry flag; banks stricter than NBFC/fintech. Linked guide confirms frequent enquiries can lead to decline but gives no count; the count is the estimate,
+moneyview,writeoff_allowed,false,BUREAU-WO,estimate,true,Not published. Written-off/settled accounts are a standard knock-out at all lenders. Linked guide: lenders may refuse a loan with a written-off or settled account,
+kreditbee,min_age,21,KREDITBEE-A1,aggregator,false,,
+kreditbee,max_age_at_maturity,55,KREDITBEE-A2,estimate,true,One source says 45 at application; 55 at maturity assumed,
+kreditbee,max_age_at_maturity_se,55,KREDITBEE-A2,estimate,true,Lender-type default (fintech); linked page does not state it,
+kreditbee,min_income_metro,10000,KREDITBEE-P1,lender_official,false,,"Personal income; household income must exceed Rs 25,000"
+kreditbee,min_income_non_metro,10000,KREDITBEE-P1,lender_official,false,,As above
+kreditbee,min_current_job_months,2,KREDITBEE-P1,lender_official,false,,
+kreditbee,ntc_allowed,true,KREDITBEE-A2,aggregator,false,,No CIBIL required
+kreditbee,min_credit_score,600,KREDITBEE-A2,estimate,true,"Thin-file OK, but very low scores assumed declined",
+kreditbee,self_employed_allowed,true,KREDITBEE-A1,estimate,true,Lender-type default (fintech); linked page does not state it,
+kreditbee,min_loan_amount,3000,KREDITBEE-P1,lender_official,false,,
+kreditbee,max_loan_amount,1000000,KREDITBEE-P1,lender_official,false,,
+kreditbee,min_tenure_months,3,KREDITBEE-P1,lender_official,false,,
+kreditbee,max_tenure_months,60,KREDITBEE-P1,lender_official,false,,
+kreditbee,rate_min_pct,12.0,KREDITBEE-P1,lender_official,false,,
+kreditbee,rate_max_pct,27.5,KREDITBEE-P1,lender_official,false,,
+kreditbee,processing_fee_pct,0.047,KREDITBEE-P1,lender_official,false,,Up to 4.7% + GST
+kreditbee,min_total_exp_months,6,KREDITBEE-P1,estimate,true,KreditBee's eligibility page (linked) is silent on this rule. Lender-type default (fintech),
+kreditbee,se_min_age,23,ICICI-P4,estimate,true,"Not published by KreditBee. fintech default, the value ICICI Bank publishes for this rule (linked)",
+kreditbee,se_min_vintage_months,24,ICICI-P4,estimate,true,"Not published by KreditBee. fintech default, the value ICICI Bank publishes for this rule (linked)",
+kreditbee,se_min_annual_income,250000,KREDITBEE-P1,estimate,true,KreditBee's eligibility page (linked) is silent on this rule. Lender-type default (fintech),
+kreditbee,allowed_employer_categories,any,KREDITBEE-P1,estimate,true,"KreditBee's eligibility page (linked) lists no employer restriction, read as any. Lender-type default (fintech)",
+kreditbee,salary_account_required,false,PNB-N1,estimate,true,"Not published by KreditBee. fintech default, the value Punjab National Bank publishes for this rule (linked)",
+kreditbee,foir_lt_50k,0.5,HDFC-P3,estimate,true,Not published by KreditBee. Banks: HDFC FOIR blog (40-55%) and benchmark calculator CALC-B1 (50%); NBFCs +5pp (higher risk appetite); fintech flat 50% (low-income book),
+kreditbee,foir_50k_1l,0.5,HDFC-P3,estimate,true,"Not published by KreditBee. Banded FOIR: lenders allow a larger share of income as income rises (more residual income after expenses); base level from HDFC's FOIR article (40-55%, linked)",
+kreditbee,foir_ge_1l,0.55,HDFC-P3,estimate,true,"Not published by KreditBee. Banded FOIR for high earners; base level from HDFC's FOIR article (40-55%, linked)",
+kreditbee,max_income_multiple,15,AXIS-C1,estimate,true,"Not published by KreditBee. fintech default, the value Axis Bank publishes for this rule (linked)",
+kreditbee,max_dpd_12m,30,BUREAU-DPD,estimate,true,Not published. Industry practice: banks decline any 30+ DPD in last 12m; NBFC/fintech tolerate up to 30 days. Linked guide confirms high DPD leads to decline but gives no threshold; the day limit is the estimate,
+kreditbee,max_enquiries_6m,8,BUREAU-ENQ,estimate,true,Not published. Credit-hungry flag; banks stricter than NBFC/fintech. Linked guide confirms frequent enquiries can lead to decline but gives no count; the count is the estimate,
+kreditbee,writeoff_allowed,false,BUREAU-WO,estimate,true,Not published. Written-off/settled accounts are a standard knock-out at all lenders. Linked guide: lenders may refuse a loan with a written-off or settled account,
+navi,min_age,21,NAVI-A1,estimate,true,Sources say 18 or 21; 21 used (contract-age + bureau norm),
+navi,max_age_at_maturity,65,NAVI-A1,aggregator,false,,
+navi,max_age_at_maturity_se,65,NAVI-A1,aggregator,false,,
+navi,min_income_metro,25000,NAVI-A1,aggregator,false,,Annual income > Rs 3 lakh
+navi,min_income_non_metro,25000,NAVI-A1,aggregator,false,,
+navi,min_credit_score,650,NAVI-A2,aggregator,false,,Paisabazaar says 750; conflict noted
+navi,self_employed_allowed,true,NAVI-A1,aggregator,false,,
+navi,min_loan_amount,10000,NAVI-A2,aggregator,false,,
+navi,max_loan_amount,2000000,NAVI-A2,aggregator,false,,
+navi,min_tenure_months,3,NAVI-A2,aggregator,false,,
+navi,max_tenure_months,84,NAVI-P1,lender_official,false,,Product card on the page source; the page is script-rendered
+navi,rate_min_pct,9.9,NAVI-A2,aggregator,false,,
+navi,rate_max_pct,29.96,NAVI-P1,lender_official,false,,'Interest rates up to 29.96%'
+navi,processing_fee_pct,0.0,NAVI-A2,aggregator,false,,Nil per GoCredit
+navi,min_total_exp_months,6,NAVI-P1,estimate,true,Navi Finserv's eligibility page (linked) is silent on this rule. Lender-type default (fintech),
+navi,min_current_job_months,3,NAVI-P1,estimate,true,Navi Finserv's eligibility page (linked) is silent on this rule. Lender-type default (fintech),
+navi,ntc_allowed,false,BUREAU-SCORE,estimate,true,Lender-type default (fintech). Linked guide: most lenders want 700+ and no-score applicants may be rejected; this lender's own stance is not published,
+navi,se_min_age,23,ICICI-P4,estimate,true,"Not published by Navi Finserv. fintech default, the value ICICI Bank publishes for this rule (linked)",
+navi,se_min_vintage_months,24,ICICI-P4,estimate,true,"Not published by Navi Finserv. fintech default, the value ICICI Bank publishes for this rule (linked)",
+navi,se_min_annual_income,250000,NAVI-P1,estimate,true,Navi Finserv's eligibility page (linked) is silent on this rule. Lender-type default (fintech),
+navi,allowed_employer_categories,any,NAVI-P1,estimate,true,"Navi Finserv's eligibility page (linked) lists no employer restriction, read as any. Lender-type default (fintech)",
+navi,salary_account_required,false,PNB-N1,estimate,true,"Not published by Navi Finserv. fintech default, the value Punjab National Bank publishes for this rule (linked)",
+navi,foir_lt_50k,0.5,HDFC-P3,estimate,true,Not published by Navi Finserv. Banks: HDFC FOIR blog (40-55%) and benchmark calculator CALC-B1 (50%); NBFCs +5pp (higher risk appetite); fintech flat 50% (low-income book),
+navi,foir_50k_1l,0.5,HDFC-P3,estimate,true,"Not published by Navi Finserv. Banded FOIR: lenders allow a larger share of income as income rises (more residual income after expenses); base level from HDFC's FOIR article (40-55%, linked)",
+navi,foir_ge_1l,0.55,HDFC-P3,estimate,true,"Not published by Navi Finserv. Banded FOIR for high earners; base level from HDFC's FOIR article (40-55%, linked)",
+navi,max_income_multiple,15,AXIS-C1,estimate,true,"Not published by Navi Finserv. fintech default, the value Axis Bank publishes for this rule (linked)",
+navi,max_dpd_12m,30,BUREAU-DPD,estimate,true,Not published. Industry practice: banks decline any 30+ DPD in last 12m; NBFC/fintech tolerate up to 30 days. Linked guide confirms high DPD leads to decline but gives no threshold; the day limit is the estimate,
+navi,max_enquiries_6m,8,BUREAU-ENQ,estimate,true,Not published. Credit-hungry flag; banks stricter than NBFC/fintech. Linked guide confirms frequent enquiries can lead to decline but gives no count; the count is the estimate,
+navi,writeoff_allowed,false,BUREAU-WO,estimate,true,Not published. Written-off/settled accounts are a standard knock-out at all lenders. Linked guide: lenders may refuse a loan with a written-off or settled account,
+fibe,min_age,19,FIBE-P1,lender_official,false,,
+fibe,max_age_at_maturity,55,FIBE-P1,lender_official,false,,Stated as age 19-55; treated as the limit at loan end
+fibe,min_income_metro,25000,FIBE-P2,lender_official,false,,"Eligibility page Rs 25,000; product page says Rs 20,000"
+fibe,min_income_non_metro,25000,FIBE-P2,lender_official,false,,As above
+fibe,ntc_allowed,true,FIBE-P1,lender_official,false,,
+fibe,min_credit_score,650,FIBE-P1,lender_official,false,,Preferably 650+; first-time borrowers considered
+fibe,self_employed_allowed,false,FIBE-P1,lender_official,false,,Salaried (private or public sector)
+fibe,min_loan_amount,5000,FIBE-P1,lender_official,false,,
+fibe,max_loan_amount,1000000,FIBE-P1,lender_official,false,,
+fibe,min_tenure_months,6,FIBE-P1,lender_official,false,,
+fibe,max_tenure_months,36,FIBE-P1,lender_official,false,,
+fibe,rate_min_pct,18.0,FIBE-P3,lender_official,false,,
+fibe,rate_max_pct,30.0,FIBE-A1,aggregator,false,,
+fibe,processing_fee_pct,0.0,FIBE-P3,lender_official,false,,'no origination fee'
+fibe,max_age_at_maturity_se,58,FIBE-P1,estimate,true,Fibe (EarlySalary)'s eligibility page (linked) is silent on this rule. Lender-type default (fintech),
+fibe,min_total_exp_months,6,FIBE-P1,estimate,true,Fibe (EarlySalary)'s eligibility page (linked) is silent on this rule. Lender-type default (fintech),
+fibe,min_current_job_months,3,FIBE-P1,estimate,true,Fibe (EarlySalary)'s eligibility page (linked) is silent on this rule. Lender-type default (fintech),
+fibe,se_min_age,23,ICICI-P4,estimate,true,"Not published by Fibe (EarlySalary). fintech default, the value ICICI Bank publishes for this rule (linked)",
+fibe,se_min_vintage_months,24,ICICI-P4,estimate,true,"Not published by Fibe (EarlySalary). fintech default, the value ICICI Bank publishes for this rule (linked)",
+fibe,se_min_annual_income,250000,FIBE-P1,estimate,true,Fibe (EarlySalary)'s eligibility page (linked) is silent on this rule. Lender-type default (fintech),
+fibe,allowed_employer_categories,any,FIBE-P1,estimate,true,"Fibe (EarlySalary)'s eligibility page (linked) lists no employer restriction, read as any. Lender-type default (fintech)",
+fibe,salary_account_required,false,PNB-N1,estimate,true,"Not published by Fibe (EarlySalary). fintech default, the value Punjab National Bank publishes for this rule (linked)",
+fibe,foir_lt_50k,0.7,FIBE-C1,lender_official,false,,Calculator: all EMIs incl. the new one within 70% of income (its eligibility page says debt-to-income under 40%; the calculator is used)
+fibe,foir_50k_1l,0.7,FIBE-C1,lender_official,false,,Calculator: all EMIs incl. the new one within 70% of income (its eligibility page says debt-to-income under 40%; the calculator is used)
+fibe,foir_ge_1l,0.7,FIBE-C1,lender_official,false,,Calculator: all EMIs incl. the new one within 70% of income (its eligibility page says debt-to-income under 40%; the calculator is used)
+fibe,max_dpd_12m,30,BUREAU-DPD,estimate,true,Not published. Industry practice: banks decline any 30+ DPD in last 12m; NBFC/fintech tolerate up to 30 days. Linked guide confirms high DPD leads to decline but gives no threshold; the day limit is the estimate,
+fibe,max_enquiries_6m,8,BUREAU-ENQ,estimate,true,Not published. Credit-hungry flag; banks stricter than NBFC/fintech. Linked guide confirms frequent enquiries can lead to decline but gives no count; the count is the estimate,
+fibe,writeoff_allowed,false,BUREAU-WO,estimate,true,Not published. Written-off/settled accounts are a standard knock-out at all lenders. Linked guide: lenders may refuse a loan with a written-off or settled account,
+fibe,max_new_emi_pct,0.3,FIBE-C1,lender_official,false,,Calculator: the new EMI alone at most 30% of income

@@ -1,0 +1,19 @@
+name,unit,type,allowed_values,source,source_detail,required,used_by_rules,description
+age,years,int,18-80,document,"Date of birth on PAN / Aadhaar",yes,"min_age, se_min_age, max_age_at_maturity*",Applicant age in completed years at application
+employment_type,category,enum,salaried | self_employed,applicant,"Declared; verified via salary slips or ITR",yes,"self_employed_allowed, income and age rules",Salaried or self-employed (professional or business)
+employer_category,category,enum,govt | psu | mnc | listed | pvt_ltd | llp | proprietorship | none,applicant,"Declared; verified via employer ID / lender's employer master list",yes,"allowed_employer_categories, min_income_small_employer, pricing",Type of employer; proxy for job stability. 'none' for self-employed
+net_monthly_income,INR/month,int,>=0,document,"Last 3 salary slips / bank statement salary credits",salaried,"min_income_*, foir_*, max_income_multiple",Take-home monthly salary after tax and deductions
+annual_income_itr,INR/year,int,>=0,document,"Last 2 years ITR / audited financials",self_employed,"se_min_annual_income, foir_* (as income/12)",Annual income for self-employed applicants
+business_vintage_months,months,int,>=0,document,"GST / shop-act registration / ITR history",self_employed,se_min_vintage_months,Months the business or practice has been running
+total_work_exp_months,months,int,>=0,applicant,"Declared; verified via EPFO / experience letters",salaried,min_total_exp_months,Total months of employment across employers
+current_job_months,months,int,>=0,applicant,"Declared; verified via EPFO / appointment letter",salaried,min_current_job_months,Months with current employer
+city,name,str,any Indian city,applicant,"Current address proof",yes,"derives city_tier; serviceable_cities (Axis lends in 65 listed cities)",City of residence / workplace
+city_tier,category,enum,metro | non_metro,applicant,"Derived from the applicant's city. Metro = Mumbai, Delhi NCR, Bengaluru, Chennai, Kolkata, Hyderabad, Pune, Ahmedabad",yes,"min_income_metro / non_metro, max_loan_amount_non_metro, serviceable_cities (via city)",Derived from city
+credit_score,score,int or null,300-900; null = no credit history,bureau,"CIBIL / Experian report",yes,"min_credit_score, se_min_credit_score, ntc_allowed, pricing",Bureau score; null for new-to-credit applicants
+max_dpd_12m,days,int,>=0,bureau,"Account-level payment history",yes,max_dpd_12m,Worst days-past-due on any account in last 12 months
+enquiries_6m,count,int,>=0,bureau,"Enquiry section of bureau report",yes,max_enquiries_6m,Hard credit enquiries in last 6 months
+has_writeoff_or_settlement,flag,bool,true | false,bureau,"Account status: written-off / settled",yes,writeoff_allowed,Any written-off or settled account in history
+existing_emi,INR/month,int,>=0,bureau,"Sum of EMIs on active loans (+ 5% of card outstanding if any); confirmed with applicant",yes,foir_*,Current monthly loan obligations
+salary_account_with,lender_id,str or null,lender_id from lenders.csv,applicant,"Bank statement",no,"salary_account_required, every rule@rel and rule@govt_rel (income floor, loan cap, FOIR, tenure, rate band at SBI, BoB, Axis, Kotak, PNB)",Bank where salary is credited (existing relationship)
+requested_amount,INR,int,>0,applicant,"Application form",yes,"offer sizing, ranking",Loan amount wanted
+requested_tenure_months,months,int,>0,applicant,"Application form",yes,"offer sizing, ranking",Tenure wanted (clipped to each lender's range)

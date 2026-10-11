@@ -1,0 +1,44 @@
+rule,unit,type,applies_to,stage,description
+min_age,years,int,all,knockout,Minimum age at application
+max_age_at_maturity,years,int,salaried,knockout+sizing,Maximum age at end of tenure for salaried applicants; caps tenure
+max_age_at_maturity_se,years,int,self_employed,knockout+sizing,Maximum age at end of tenure for self-employed applicants
+se_min_age,years,int,self_employed,knockout,Minimum age for self-employed applicants
+min_income_metro,INR/month,int,salaried,knockout,Minimum net monthly income in metro cities
+min_income_non_metro,INR/month,int,salaried,knockout,Minimum net monthly income outside metros
+min_income_small_employer,INR/month,int,salaried,knockout,Higher income floor for non-corporate / small employers (optional)
+min_total_exp_months,months,int,salaried,knockout,Minimum total work experience
+min_current_job_months,months,int,salaried,knockout,Minimum months with current employer
+allowed_employer_categories,list,str,salaried,knockout,Pipe-separated employer categories accepted or 'any'
+salary_account_required,flag,bool,salaried,knockout,Applicant must hold a salary account with the lender
+self_employed_allowed,flag,bool,self_employed,knockout,Whether the product is open to self-employed applicants
+se_min_vintage_months,months,int,self_employed,knockout,Minimum business / practice vintage
+se_min_annual_income,INR/year,int,self_employed,knockout,Minimum annual income per ITR
+se_min_credit_score,score,int,self_employed,knockout,Higher score cut-off for self-employed (optional)
+min_credit_score,score,int,all,knockout,Minimum bureau score (CIBIL 300-900)
+ntc_allowed,flag,bool,all,knockout,Whether new-to-credit applicants (no score) are accepted
+max_dpd_12m,days,int,all,knockout,Worst days-past-due tolerated in the last 12 months
+max_enquiries_6m,count,int,all,knockout,Maximum hard enquiries in the last 6 months
+writeoff_allowed,flag,bool,all,knockout,Whether any written-off / settled account is tolerated
+serviceable_cities,list,str,all,knockout,Cities where the lender lends; applicants elsewhere are rejected (optional)
+foir_lt_50k,ratio,float,all,sizing,Max (all EMIs incl. new) / income for income < Rs 50k
+foir_50k_1l,ratio,float,all,sizing,FOIR for income Rs 50k - 1 lakh
+foir_ge_1l,ratio,float,all,sizing,FOIR for income >= Rs 1 lakh
+max_income_multiple,x monthly income,float,all,sizing,Maximum loan as a multiple of monthly income (optional: absent = the lender publishes no salary multiple and sizes loans by FOIR and caps only)
+income_multiple_net_of_emi,flag,bool,all,sizing,Salary multiple applies to income minus existing EMIs (optional)
+foir_bands,income:ratio list,str,all,sizing,"FOIR at the lender's own income breakpoints, e.g. 25000:0.5|50000:0.6|*:0.75 (upper bounds inclusive); overrides the three FOIR bands (optional)"
+max_new_emi_pct,ratio,float,all,sizing,Cap on the new loan's EMI alone as a share of income (optional)
+income_multiple_by_tenure,tenure months:x income list,str,all,sizing,"Salary multiple that depends on tenure, e.g. 12:4|24:8|*:23 (upper bounds inclusive); a cell may hold one multiple per income band, e.g. 60:20/23/27; overrides max_income_multiple (optional)"
+income_multiple_income_bands,income list,str,all,sizing,"Upper bounds (inclusive) of the income bands used by income_multiple_by_tenure cells, e.g. 49999|75000 (optional)"
+min_loan_amount,INR,int,all,sizing,Minimum loan amount
+max_loan_amount,INR,int,all,sizing,Product cap on loan amount
+max_loan_amount_non_metro,INR,int,all,sizing,Lower cap outside metros (optional)
+min_loan_amount_non_metro,INR,int,all,sizing,Minimum loan outside metros (optional)
+min_tenure_months,months,int,all,sizing,Minimum tenure
+max_tenure_months,months,int,all,sizing,Maximum tenure
+rate_min_pct,% p.a.,float,all,pricing,Lowest published interest rate (best risk tier)
+rate_max_pct,% p.a.,float,all,pricing,Highest rate in band (worst accepted risk tier)
+processing_fee_pct,ratio,float,all,pricing,Processing fee as a share of loan amount (before 18% GST)
+processing_fee_cap,INR,int,all,pricing,Flat cap on processing fee (optional)
+rate_avg_pct,% p.a.,float,all,pricing,Average rate the lender actually charged last quarter (its own disclosure); a typical borrower is priced here (optional)
+rate_best_min_amount,INR,int,all,pricing,Lowest rates are only offered on loans of at least this amount (optional)
+rate_by_score,score:rate list,str,all,pricing,"Published rate per CIBIL band, e.g. 800:11.6|750:12.6 (optional)"

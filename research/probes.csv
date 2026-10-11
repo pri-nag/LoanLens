@@ -1,0 +1,156 @@
+probe_id,lender_id,calculator_url,accessed_on,net_income,existing_emi,tenure_months,rate_pct,max_loan_shown,eligible_shown,notes,calc_cap,replay
+B1-01,_benchmark,https://stockcalc.in/calculator/personal-loan-eligibility,2026-10-11,50000,0,60,11.0,1150000,Y,Read via search-engine extract (source CALC-B1); result shown as ~Rs 11.5 lakh,,Y
+B1-02,_benchmark,https://stockcalc.in/calculator/personal-loan-eligibility,2026-10-11,100000,0,60,11.0,2300000,Y,Read via search-engine extract (source CALC-B1); result shown as ~Rs 23 lakh,,Y
+AXIS-01,axis,https://www.axis.bank.in/calculators/personal-loan-eligibility-calculator,2026-10-12,30000,0,84,9.99,450000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored",1500000,Y
+AXIS-02,axis,https://www.axis.bank.in/calculators/personal-loan-eligibility-calculator,2026-10-12,50000,0,84,9.99,750000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored",1500000,Y
+AXIS-03,axis,https://www.axis.bank.in/calculators/personal-loan-eligibility-calculator,2026-10-12,75000,0,84,9.99,1125000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored",1500000,Y
+AXIS-04,axis,https://www.axis.bank.in/calculators/personal-loan-eligibility-calculator,2026-10-12,100000,0,84,9.99,1500000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored; calculator's own cap",1500000,Y
+AXIS-05,axis,https://www.axis.bank.in/calculators/personal-loan-eligibility-calculator,2026-10-12,150000,0,84,9.99,1500000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored; calculator's own cap",1500000,Y
+AXIS-06,axis,https://www.axis.bank.in/calculators/personal-loan-eligibility-calculator,2026-10-12,200000,0,84,9.99,1500000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored; calculator's own cap",1500000,Y
+AXIS-07,axis,https://www.axis.bank.in/calculators/personal-loan-eligibility-calculator,2026-10-12,50000,5000,84,9.99,750000,Y,"Axis calculator ignores existing EMIs; the model keeps FOIR on purpose; calculator has no rate input, tenure ignored",1500000,N
+AXIS-08,axis,https://www.axis.bank.in/calculators/personal-loan-eligibility-calculator,2026-10-12,50000,10000,84,9.99,750000,Y,"Axis calculator ignores existing EMIs; the model keeps FOIR on purpose; calculator has no rate input, tenure ignored",1500000,N
+AXIS-09,axis,https://www.axis.bank.in/calculators/personal-loan-eligibility-calculator,2026-10-12,50000,20000,84,9.99,750000,Y,"Axis calculator ignores existing EMIs; the model keeps FOIR on purpose; calculator has no rate input, tenure ignored",1500000,N
+POON-01,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,30000,0,24,14.0,343657,Y,Driven with Playwright,2000000,Y
+POON-02,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,50000,0,24,14.0,572762,Y,Driven with Playwright,2000000,Y
+POON-03,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,75000,0,24,14.0,1015352,Y,Driven with Playwright,2000000,Y
+POON-04,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,100000,0,24,14.0,1353803,Y,Driven with Playwright,2000000,Y
+POON-05,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,150000,0,24,14.0,2000000,Y,Driven with Playwright; calculator's own cap,2000000,Y
+POON-06,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,200000,0,24,14.0,2000000,Y,Driven with Playwright; calculator's own cap,2000000,Y
+POON-07,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,50000,5000,24,14.0,468624,Y,Driven with Playwright,2000000,Y
+POON-08,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,50000,10000,24,14.0,364485,Y,Driven with Playwright,2000000,Y
+POON-09,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,50000,20000,24,14.0,156208,Y,Driven with Playwright,2000000,Y
+POON-10,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,30000,0,48,14.0,603810,Y,Driven with Playwright,2000000,Y
+POON-11,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,50000,0,48,14.0,1006350,Y,Driven with Playwright,2000000,Y
+POON-12,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,75000,0,48,14.0,1783984,Y,Driven with Playwright,2000000,Y
+POON-13,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,100000,0,48,14.0,2000000,Y,Driven with Playwright; calculator's own cap,2000000,Y
+POON-14,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,150000,0,48,14.0,2000000,Y,Driven with Playwright; calculator's own cap,2000000,Y
+POON-15,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,200000,0,48,14.0,2000000,Y,Driven with Playwright; calculator's own cap,2000000,Y
+POON-16,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,50000,5000,48,14.0,823377,Y,Driven with Playwright,2000000,Y
+POON-17,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,50000,10000,48,14.0,640404,Y,Driven with Playwright,2000000,Y
+POON-18,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,50000,20000,48,14.0,274459,Y,Driven with Playwright,2000000,Y
+POON-19,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,30000,0,84,14.0,880469,Y,Driven with Playwright,2000000,Y
+POON-20,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,50000,0,84,14.0,1467448,Y,Driven with Playwright,2000000,Y
+POON-21,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,75000,0,84,14.0,2000000,Y,Driven with Playwright; calculator's own cap,2000000,Y
+POON-22,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,100000,0,84,14.0,2000000,Y,Driven with Playwright; calculator's own cap,2000000,Y
+POON-23,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,150000,0,84,14.0,2000000,Y,Driven with Playwright; calculator's own cap,2000000,Y
+POON-24,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,200000,0,84,14.0,2000000,Y,Driven with Playwright; calculator's own cap,2000000,Y
+POON-25,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,50000,5000,84,14.0,1200639,Y,Driven with Playwright,2000000,Y
+POON-26,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,50000,10000,84,14.0,933830,Y,Driven with Playwright,2000000,Y
+POON-27,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,50000,20000,84,14.0,400213,Y,Driven with Playwright,2000000,Y
+KOTA-01,kotak,https://www.kotak.bank.in/en/personal-banking/loans/personal-loan/eligibility.html,2026-10-12,30000,0,72,10.99,600000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored",,Y
+KOTA-02,kotak,https://www.kotak.bank.in/en/personal-banking/loans/personal-loan/eligibility.html,2026-10-12,50000,0,72,10.99,1000000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored",,Y
+KOTA-03,kotak,https://www.kotak.bank.in/en/personal-banking/loans/personal-loan/eligibility.html,2026-10-12,75000,0,72,10.99,1500000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored",,Y
+KOTA-04,kotak,https://www.kotak.bank.in/en/personal-banking/loans/personal-loan/eligibility.html,2026-10-12,100000,0,72,10.99,2000000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored",,Y
+KOTA-05,kotak,https://www.kotak.bank.in/en/personal-banking/loans/personal-loan/eligibility.html,2026-10-12,150000,0,72,10.99,3000000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored",,Y
+KOTA-06,kotak,https://www.kotak.bank.in/en/personal-banking/loans/personal-loan/eligibility.html,2026-10-12,200000,0,72,10.99,4000000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored",,Y
+KOTA-07,kotak,https://www.kotak.bank.in/en/personal-banking/loans/personal-loan/eligibility.html,2026-10-12,50000,5000,72,10.99,900000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored",,Y
+KOTA-08,kotak,https://www.kotak.bank.in/en/personal-banking/loans/personal-loan/eligibility.html,2026-10-12,50000,10000,72,10.99,800000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored",,Y
+KOTA-09,kotak,https://www.kotak.bank.in/en/personal-banking/loans/personal-loan/eligibility.html,2026-10-12,50000,20000,72,10.99,600000,Y,"Kotak calculator applies no FOIR; at a 40% EMI load the model's estimated FOIR binds first; calculator has no rate input, tenure ignored",,N
+IDFC-01,idfc,https://www.idfcfirst.bank.in/personal-banking/loans/personal-loan/personal-loan-eligibility-calculator,2026-10-12,30000,0,60,9.99,300000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored",1500000,Y
+IDFC-02,idfc,https://www.idfcfirst.bank.in/personal-banking/loans/personal-loan/personal-loan-eligibility-calculator,2026-10-12,50000,0,60,9.99,500000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored",1500000,Y
+IDFC-03,idfc,https://www.idfcfirst.bank.in/personal-banking/loans/personal-loan/personal-loan-eligibility-calculator,2026-10-12,75000,0,60,9.99,750000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored",1500000,Y
+IDFC-04,idfc,https://www.idfcfirst.bank.in/personal-banking/loans/personal-loan/personal-loan-eligibility-calculator,2026-10-12,100000,0,60,9.99,1000000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored",1500000,Y
+IDFC-05,idfc,https://www.idfcfirst.bank.in/personal-banking/loans/personal-loan/personal-loan-eligibility-calculator,2026-10-12,150000,0,60,9.99,1500000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored; calculator's own cap",1500000,Y
+IDFC-06,idfc,https://www.idfcfirst.bank.in/personal-banking/loans/personal-loan/personal-loan-eligibility-calculator,2026-10-12,200000,0,60,9.99,1500000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored; calculator's own cap",1500000,Y
+IDFC-07,idfc,https://www.idfcfirst.bank.in/personal-banking/loans/personal-loan/personal-loan-eligibility-calculator,2026-10-12,50000,5000,60,9.99,450000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored",1500000,Y
+IDFC-08,idfc,https://www.idfcfirst.bank.in/personal-banking/loans/personal-loan/personal-loan-eligibility-calculator,2026-10-12,50000,10000,60,9.99,400000,Y,"Driven with Playwright; calculator has no rate input, tenure ignored",1500000,Y
+IDFC-09,idfc,https://www.idfcfirst.bank.in/personal-banking/loans/personal-loan/personal-loan-eligibility-calculator,2026-10-12,50000,20000,60,9.99,300000,Y,IDFC calculator applies no FOIR; at a 40% EMI load the model's estimated FOIR binds first; calculator has no rate input,1500000,N
+POON-28,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,49000,0,24,14.0,561307,Y,Driven with Playwright,2000000,Y
+POON-29,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,55000,0,24,14.0,744591,Y,Driven with Playwright,2000000,Y
+POON-30,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,60000,0,24,14.0,812281,Y,Driven with Playwright,2000000,Y
+POON-31,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,65000,0,24,14.0,879972,Y,Driven with Playwright,2000000,Y
+POON-32,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,70000,0,24,14.0,947662,Y,Driven with Playwright,2000000,Y
+POON-33,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,74000,0,24,14.0,1001814,Y,Driven with Playwright,2000000,Y
+POON-34,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,49000,0,48,14.0,986223,Y,Driven with Playwright,2000000,Y
+POON-35,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,55000,0,48,14.0,1308255,Y,Driven with Playwright,2000000,Y
+POON-36,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,60000,0,48,14.0,1427187,Y,Driven with Playwright,2000000,Y
+POON-37,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,65000,0,48,14.0,1546119,Y,Driven with Playwright,2000000,Y
+POON-38,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,70000,0,48,14.0,1665051,Y,Driven with Playwright,2000000,Y
+POON-39,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,74000,0,48,14.0,1760197,Y,Driven with Playwright,2000000,Y
+POON-40,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,49000,0,84,14.0,1438099,Y,Driven with Playwright,2000000,Y
+POON-41,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,55000,0,84,14.0,1907682,Y,Driven with Playwright,2000000,Y
+POON-42,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,60000,0,84,14.0,2000000,Y,Driven with Playwright; calculator's own cap,2000000,Y
+POON-43,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,65000,0,84,14.0,2000000,Y,Driven with Playwright; calculator's own cap,2000000,Y
+POON-44,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,70000,0,84,14.0,2000000,Y,Driven with Playwright; calculator's own cap,2000000,Y
+POON-45,poonawalla,https://poonawallafincorp.com/personal-loan/eligibility-calculator,2026-10-12,74000,0,84,14.0,2000000,Y,Driven with Playwright; calculator's own cap,2000000,Y
+ABCL-01,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,30000,0,24,11.0,240000,Y,Driven with Playwright,5000000,Y
+ABCL-02,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,50000,0,24,11.0,400000,Y,Driven with Playwright,5000000,Y
+ABCL-03,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,75000,0,24,11.0,600000,Y,Driven with Playwright,5000000,Y
+ABCL-04,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,100000,0,24,11.0,800000,Y,Driven with Playwright,5000000,Y
+ABCL-05,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,150000,0,24,11.0,1200000,Y,Driven with Playwright,5000000,Y
+ABCL-06,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,200000,0,24,11.0,1600000,Y,Driven with Playwright,5000000,Y
+ABCL-07,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,50000,5000,24,11.0,360000,Y,Driven with Playwright,5000000,Y
+ABCL-08,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,50000,10000,24,11.0,320000,Y,Driven with Playwright,5000000,Y
+ABCL-09,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,50000,20000,24,11.0,240000,Y,Driven with Playwright,5000000,Y
+ABCL-10,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,30000,0,60,11.0,510000,Y,Driven with Playwright,5000000,Y
+ABCL-11,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,50000,0,60,11.0,850000,Y,Driven with Playwright,5000000,Y
+ABCL-12,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,75000,0,60,11.0,1275000,Y,Driven with Playwright,5000000,Y
+ABCL-13,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,100000,0,60,11.0,1700000,Y,Driven with Playwright,5000000,Y
+ABCL-14,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,150000,0,60,11.0,2550000,Y,Driven with Playwright,5000000,Y
+ABCL-15,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,200000,0,60,11.0,3400000,Y,Driven with Playwright,5000000,Y
+ABCL-16,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,50000,5000,60,11.0,765000,Y,Driven with Playwright,5000000,Y
+ABCL-17,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,50000,10000,60,11.0,680000,Y,Driven with Playwright,5000000,Y
+ABCL-18,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,50000,20000,60,11.0,510000,Y,Driven with Playwright,5000000,Y
+ABCL-19,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,30000,0,84,11.0,690000,Y,Driven with Playwright,5000000,Y
+ABCL-20,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,50000,0,84,11.0,1150000,Y,Driven with Playwright,5000000,Y
+ABCL-21,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,75000,0,84,11.0,1725000,Y,Driven with Playwright,5000000,Y
+ABCL-22,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,100000,0,84,11.0,2300000,Y,Driven with Playwright,5000000,Y
+ABCL-23,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,150000,0,84,11.0,3450000,Y,Driven with Playwright,5000000,Y
+ABCL-24,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,200000,0,84,11.0,4600000,Y,Driven with Playwright,5000000,Y
+ABCL-25,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,50000,5000,84,11.0,1035000,Y,Driven with Playwright,5000000,Y
+ABCL-26,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,50000,10000,84,11.0,920000,Y,Driven with Playwright,5000000,Y
+ABCL-27,abcl,https://www.adityabirlacapital.com/abc-of-calculators/personal-loan-eligibility-calculator,2026-10-12,50000,20000,84,11.0,690000,Y,Driven with Playwright,5000000,Y
+FIBE-01,fibe,https://www.fibe.in/personal-loan-eligibility-calculator/,2026-10-12,30000,0,12,24.0,95500,Y,Driven with Playwright; tenure chosen by the calculator,1000000,Y
+FIBE-02,fibe,https://www.fibe.in/personal-loan-eligibility-calculator/,2026-10-12,50000,0,24,24.0,284000,Y,Driven with Playwright; tenure chosen by the calculator,1000000,Y
+FIBE-03,fibe,https://www.fibe.in/personal-loan-eligibility-calculator/,2026-10-12,75000,0,36,24.0,573500,Y,Driven with Playwright; tenure chosen by the calculator,1000000,Y
+FIBE-04,fibe,https://www.fibe.in/personal-loan-eligibility-calculator/,2026-10-12,100000,0,36,24.0,765000,Y,Driven with Playwright; tenure chosen by the calculator,1000000,Y
+FIBE-05,fibe,https://www.fibe.in/personal-loan-eligibility-calculator/,2026-10-12,150000,0,36,24.0,1000000,Y,Driven with Playwright; tenure chosen by the calculator; calculator's own cap,1000000,Y
+FIBE-06,fibe,https://www.fibe.in/personal-loan-eligibility-calculator/,2026-10-12,200000,0,36,24.0,1000000,Y,Driven with Playwright; tenure chosen by the calculator; calculator's own cap,1000000,Y
+FIBE-07,fibe,https://www.fibe.in/personal-loan-eligibility-calculator/,2026-10-12,50000,5000,24,24.0,284000,Y,Driven with Playwright; tenure chosen by the calculator,1000000,Y
+FIBE-08,fibe,https://www.fibe.in/personal-loan-eligibility-calculator/,2026-10-12,50000,10000,24,24.0,284000,Y,Driven with Playwright; tenure chosen by the calculator,1000000,Y
+FIBE-09,fibe,https://www.fibe.in/personal-loan-eligibility-calculator/,2026-10-12,50000,20000,24,24.0,284000,Y,Driven with Playwright; tenure chosen by the calculator,1000000,Y
+TATA-01,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,30000,0,12,10.99,180000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-02,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,50000,0,12,10.99,339455,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-03,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,75000,0,12,10.99,525000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-04,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,100000,0,12,10.99,700000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-05,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,150000,0,12,10.99,1050000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-06,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,200000,0,12,10.99,1400000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-07,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,50000,5000,12,10.99,282879,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-08,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,50000,10000,12,10.99,226303,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-09,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,50000,20000,12,10.99,113152,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-10,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,30000,0,24,10.99,300000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-11,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,50000,0,24,10.99,643733,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-12,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,75000,0,24,10.99,975000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-13,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,100000,0,24,10.99,1300000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-14,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,150000,0,24,10.99,1950000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-15,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,200000,0,24,10.99,2600000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-16,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,50000,5000,24,10.99,536444,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-17,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,50000,10000,24,10.99,429155,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-18,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,50000,20000,24,10.99,214578,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-19,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,30000,0,36,10.99,420000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-20,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,50000,0,36,10.99,900000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-21,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,75000,0,36,10.99,1350000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-22,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,100000,0,36,10.99,1800000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-23,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,150000,0,36,10.99,2700000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-24,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,200000,0,36,10.99,3600000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-25,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,50000,5000,36,10.99,763732,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-26,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,50000,10000,36,10.99,610986,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-27,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,50000,20000,36,10.99,305493,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-28,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,30000,0,48,10.99,510000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-29,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,50000,0,48,10.99,1100000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-30,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,75000,0,48,10.99,1650000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-31,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,100000,0,48,10.99,2300000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-32,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,150000,0,48,10.99,3450000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-33,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,200000,0,48,10.99,4600000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-34,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,50000,5000,48,10.99,967467,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-35,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,50000,10000,48,10.99,773974,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-36,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,50000,20000,48,10.99,386987,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-37,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,30000,0,60,10.99,600000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-38,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,50000,0,60,10.99,1150000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-39,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,75000,0,60,10.99,1725000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-40,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,100000,0,60,10.99,2700000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-41,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,150000,0,60,10.99,4050000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-42,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,200000,0,60,10.99,5400000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-43,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,50000,5000,60,10.99,1150000,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-44,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,50000,10000,60,10.99,920072,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y
+TATA-45,tata,https://www.tatacapital.com/personal-loan/eligibility-calculator.html,2026-10-12,50000,20000,60,10.99,460036,Y,Tata's own calculator class run in the page ('cat a' employer; employer API returned 503),,Y

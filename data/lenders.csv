@@ -1,0 +1,21 @@
+lender_id,lender_name,lender_type,regulator_category,scale_basis,official_rule_source_found,digital_application,selection_reason
+sbi,State Bank of India,psu_bank,Public sector bank,Largest Indian bank by assets; PSBs hold the largest PL value share (37.8%),yes,yes,Largest PL book in the PSB segment; Xpress Credit is the benchmark govt-salary product
+bob,Bank of Baroda,psu_bank,Public sector bank,2nd-largest PSB by assets,yes,yes,Second PSB; publishes city-tier loan limits
+pnb,Punjab National Bank,psu_bank,Public sector bank,Top-3 PSB by assets,yes (Swaagat terms from news/aggregator),yes,Third PSB; salary-account scheme plus Swaagat loan for new customers
+hdfc,HDFC Bank,pvt_bank,Private sector bank,Largest private bank by assets,yes,yes,Largest private-bank PL lender
+icici,ICICI Bank,pvt_bank,Private sector bank,2nd-largest private bank,yes (incl. calculator code and employer file),yes,Top private lender; publishes self-employed rules
+axis,Axis Bank,pvt_bank,Private sector bank,3rd-largest private bank,yes,yes,Publishes relationship-based income/amount rules
+kotak,Kotak Mahindra Bank,pvt_bank,Private sector bank,Top-5 private bank,yes,yes,Publishes employer-type income floors
+indusind,IndusInd Bank,pvt_bank,Private sector bank,Top-6 private bank,yes,yes,Publishes full salaried and self-employed criteria
+idfc,IDFC FIRST Bank,pvt_bank,Private sector bank,Retail-heavy private bank,yes,yes,Retail-first bank with public eligibility calculator
+yes,YES BANK,pvt_bank,Private sector bank,Mid-size private bank,"partial (amount, rate, fees; eligibility from aggregator)",yes,Adds a mid-size private bank; large ticket (Rs 40 lakh)
+bajaj,Bajaj Finance,nbfc,NBFC (upper layer),Largest retail NBFC in India,yes,yes,Largest NBFC personal-loan lender
+tata,Tata Capital,nbfc,NBFC (upper layer),Large diversified NBFC,yes,yes,Large NBFC; low income floor (Rs 15k)
+abcl,Aditya Birla Capital,nbfc,NBFC (upper layer),Large diversified NBFC,yes,yes,Large NBFC; strict published score cut-off (750)
+hdb,HDB Financial Services,nbfc,NBFC (upper layer),HDFC Bank's NBFC arm; large retail book,yes,partial,Serves lower-income and tier-2/3 borrowers
+poonawalla,Poonawalla Fincorp,nbfc,NBFC (middle layer),Fast-growing digital NBFC,yes,yes,Published employer-type restrictions
+lt,L&T Finance,nbfc,NBFC (upper layer),Large NBFC with retail focus,yes,yes,Large NBFC; income judged on net disposable income
+moneyview,Moneyview,fintech,Digital lending platform (partner NBFCs/banks),Among the largest PL apps by disbursal count,yes,yes,Large digital PL platform; accepts low/thin scores
+kreditbee,KreditBee,fintech,Fintech NBFC,Among the largest PL apps by disbursal count,yes,yes,Small-ticket lender; very low income floor
+navi,Navi Finserv,fintech,Fintech NBFC,Large digital-only lender,"partial (tenure, rate cap; rest from aggregator)",yes,Digital-only; long tenure (72 months)
+fibe,Fibe (EarlySalary),fintech,Fintech NBFC,Large salaried-youth PL app,yes,yes,Lends to first-time borrowers
